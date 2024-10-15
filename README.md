@@ -55,3 +55,5 @@ Ready to take your business to the next level? Reach out to us today!
 
 - **Email**: [info@techxdoz.com](mailto:info@techxdoz.com) 📧
 - **Phone**: +94774910630 📱
+
+[TECHXDOZ.pdf](https://github.com/user-attachments/files/17373166/TECHXDOZ.pdf)
