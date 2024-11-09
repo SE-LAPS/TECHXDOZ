@@ -36,19 +36,19 @@ Techxdoz is a leading IT provider with over 15 years of experience. Our team of 
 At Techxdoz, we offer personalized, innovative solutions designed to accelerate your business transformation ⚡. We take a client-centric approach, aligning technology with your business goals 🎯.
 
 ## What Sets Us Apart? 🌟
-- **Innovation at the Core**: Cutting-edge technology solutions that give you a competitive edge 💡.
-- **Accelerating Business Transformation**: Seamless integration of advanced technologies to drive growth 📈 and efficiency ⚙️.
-- **Highly Skilled Engineers**: Our team of experienced professionals ensures high-quality solutions 🛠️.
-- **Tailored for You**: Customized solutions to meet your unique needs 🎯.
-- **Seamless Integration**: Solutions that fit smoothly into your operations 🔄.
-- **Experienced and Reliable Team**: 15+ years of proven success in the industry 🏅.
-- **End-to-End Support**: We provide comprehensive support from initial consultation to post-launch 💼.
+- **Innovation at the Core**: Cutting-edge technology solutions that give you a competitive edge.
+- **Accelerating Business Transformation**: Seamless integration of advanced technologies to drive growth and efficiency.
+- **Highly Skilled Engineers**: Our team of experienced professionals ensures high-quality solutions.
+- **Tailored for You**: Customized solutions to meet your unique needs.
+- **Seamless Integration**: Solutions that fit smoothly into your operations.
+- **Experienced and Reliable Team**: 15+ years of proven success in the industry.
+- **End-to-End Support**: We provide comprehensive support from initial consultation to post-launch.
 
 ## Core Values 🌐
-- **Expert Team**: Passionate developers, marketers, and IT consultants 👩‍💻👨‍💻.
-- **Client-Centric Approach**: Solutions that add real value to your business 💼.
-- **Cutting-Edge Technologies**: We use the latest technology and best practices 🛠️.
-- **End-to-End Solutions**: A complete range of services to support your growth 📊.
+- **Expert Team**: Passionate developers, marketers, and IT consultants.
+- **Client-Centric Approach**: Solutions that add real value to your business.
+- **Cutting-Edge Technologies**: We use the latest technology and best practices.
+- **End-to-End Solutions**: A complete range of services to support your growth.
 
 ## Contact Us 📞
 Ready to take your business to the next level? Reach out to us today!
@@ -56,5 +56,5 @@ Ready to take your business to the next level? Reach out to us today!
 - **Email**: [info@techxdoz.com](mailto:info@techxdoz.com) 📧
 - **Phone**: +94774910630 📱
 
-## SITE PDF✨ 
-[TECHXDOZ.pdf](https://github.com/user-attachments/files/17373166/TECHXDOZ.pdf)
+## SITE Preview✨ 
+
