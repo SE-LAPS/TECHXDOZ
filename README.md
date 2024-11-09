@@ -30,7 +30,15 @@ Upskill your team with our comprehensive IT training programs. We offer courses 
 Get expert advice on IT infrastructure and strategic insights tailored to your business goals. From planning major overhauls to strategic IT decisions, we are here to help.
 
 ## Who We Are 🤝
-Techxdoz is a leading IT provider with over 15 years of experience. Our team of professionals delivers custom software 💻, mobile apps 📱, web design 🌐, enterprise solutions 🏢, digital marketing 📊, SEO 🔍, IT training , and consulting services 🧠.
+Techxdoz is a leading IT provider with over 15 years of experience. Our team of professionals delivers 
+<br> Custom Software 💻
+<br> Mobile Apps 📱
+<br> Web Design 🌐
+<br> Enterprise Solutions 🏢
+<br> Digital Marketing 📊
+<br> SEO 🔍
+<br> IT Training
+<br> Consulting Services 🧠.
 
 ## Why Choose Us? 🤔
 At Techxdoz, we offer personalized, innovative solutions designed to accelerate your business transformation ⚡. We take a client-centric approach, aligning technology with your business goals 🎯.
