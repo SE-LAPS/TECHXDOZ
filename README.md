@@ -31,14 +31,14 @@ Get expert advice on IT infrastructure and strategic insights tailored to your b
 
 ## Who We Are 🤝
 Techxdoz is a leading IT provider with over 15 years of experience. Our team of professionals delivers <br>
-<br>1️⃣ Custom Software 
-<br>2️⃣ Mobile Apps 
-<br>3️⃣ Web Design 
-<br>4️⃣ Enterprise Solutions 
-<br>5️⃣ Digital Marketing 
-<br>6️⃣ SEO 
-<br>7️⃣ IT Training
-<br>8️⃣ Consulting Services
+<br>1️⃣  Custom Software 
+<br>2️⃣  Mobile Apps 
+<br>3️⃣  Web Design 
+<br>4️⃣  Enterprise Solutions 
+<br>5️⃣  Digital Marketing 
+<br>6️⃣  SEO 
+<br>7️⃣  IT Training
+<br>8️⃣  Consulting Services
 
 ## Why Choose Us? 🤔
 At Techxdoz, we offer personalized, innovative solutions designed to accelerate your business transformation ⚡. We take a client-centric approach, aligning technology with your business goals 🎯.
