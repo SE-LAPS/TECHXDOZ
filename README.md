@@ -62,7 +62,7 @@ At Techxdoz, we offer personalized, innovative solutions designed to accelerate 
 Ready to take your business to the next level? Reach out to us today!
 
 - **Email**: [info@techxdoz.com](mailto:info@techxdoz.com) 📧
-- **Phone**: [+94 774 910 630](+94 774 910 630) 📱
+- **Phone**: +94 774 910 630 📱
 
 ## SITE Preview✨ 
 🌐 [https://tinyurl.com/NEW-TECHXDOZ](https://tinyurl.com/NEW-TECHXDOZ)
