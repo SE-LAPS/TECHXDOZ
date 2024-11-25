@@ -191,7 +191,7 @@ const footerMessage = document.getElementById('footer-message');
 
 fom.addEventListener('submit', (event) => {
    event.preventDefault();
-   footerMessage.innerHTML = '~ Form submitted success fully!';
+   footerMessage.innerHTML = 'Thank You For Joining With Us';
    footerMessage.style.display = 'flex';
    fom.reset();
    setTimeout(() => {
@@ -200,6 +200,8 @@ fom.addEventListener('submit', (event) => {
 });
 // footer validation end
 
+
+//add to  view all services button
 
 
 
