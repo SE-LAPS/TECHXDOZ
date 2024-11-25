@@ -1613,8 +1613,9 @@ aside .pages {
 .work-hr {
     color: #ffffff;
     position: absolute;
-    right: 0;
+    right: -110px;
     rotate: -90deg;
+    padding: 140px 60px;
 }
 
 .work-hr h6 {
@@ -2087,8 +2088,8 @@ footer form button:hover {
 }
 
 #footer-message {
-    background: #fff;
-    color: rgb(0, 172, 234);
+    background: #28082b;
+    color: white; 
     width: auto;
     height: auto;
     display: flex;
@@ -2099,8 +2100,8 @@ footer form button:hover {
     text-align: center;
     font-family: "Raleway", sans-serif;
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 35px;
+    left: 155px;
     z-index: 10;
     border-radius: 10px;
     display: none;
