@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Training Programs - TechXDoz</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/easy.css">
+    <link rel="stylesheet" href="css/slick.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="shortcut icon" href="Images/fave_icon.png" type="image/x-icon">
+
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- Animated Cursor -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+    <div class="cursor-wave cursor-wave-1"></div>
+    <div class="cursor-wave cursor-wave-2"></div>
+    <div class="cursor-wave cursor-wave-3"></div>
+    
+    <!-- Start site wrapper -->
+    <div class="site-wrapper">
+        <div class="header-index">
+            <!-- ====== Header section ====== -->
+            <header>
+                <nav class="container navbar">
+                    <div class="container-nav flex">
+                        <!-- site logo -->
+                        <a class="navbar-logo" href="index.html"><img src="Images/logo.png" alt="logo"></a>
+                        <button class="navbar-toggler" onclick="openNav()" type="button">
+                            <span class="fa-solid fa-bars"></span>
+                        </button>
+                        <!-- menus -->
+                        <ul class="navbar-nav flex">
+                            <li><a class="nav-link" href="index.html">Home</a></li>
+                            <li><a class="nav-link" href="index.html#about-section">About</a></li>
+                            <li><a class="nav-link" href="index.html#service-section">Services</a></li>
+                            <li><a class="nav-link active" href="training.html">Training</a></li>
+                            <li><a class="nav-link" href="trainers.html">Trainers</a></li>
+                            <li><a class="nav-link" href="mailto:info@techxdoz.com">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="flex nav-right">
+                        <p>CONTACT: <span>+94 774 910 630</span></p>
+                        <!-- header buttons -->
+                        <i onclick="open_search_bar()" class="fa-solid fa-magnifying-glass"></i>
+                        <i onclick="open_right_side()" class="fa-solid fa-bars"></i>
+                    </div>
+                </nav>
+                
+                <!-- Sidebar -->
+                <aside id="mySidepanel" class="sidepanel">
+                    <div class="sidebar flex">
+                        <a href="index.html"><img src="Images/logo.png" alt="logo"></a>
+                        <button class="closebtn btn_hover1" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><a class="nav-link" href="index.html">Home</a></li>
+                            <li><a class="nav-link" href="index.html#about-section">About</a></li>
+                            <li><a class="nav-link" href="index.html#service-section">Services</a></li>
+                            <li><a class="nav-link active" href="training.html">Training</a></li>
+                            <li><a class="nav-link" href="trainers.html">Trainers</a></li>
+                            <li><a class="nav-link" href="mailto:info@techxdoz.com">Contact</a></li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <!-- searchbar -->
+                <div id="search-bar">
+                    <div class="btn_hover1" onclick="close_search_bar()"><i class="fa-solid fa-xmark"></i></div>
+                    <form method="search" action="#">
+                        <input type="search" required placeholder="Search...">
+                        <button type="submit" class="btn_hover1">Search</button>
+                    </form>
+                </div>
+
+                <!-- Right Sidebar -->
+                <section class="header-right-sidebar" id="right_side">
+                    <div class="flex flex-sb">
+                        <a href="index.html"><img src="Images/right-side-logo.png" alt="logo"></a>
+                        <button class="close_right_sidebar fa-solid fa-xmark" onclick="close_right_sade()"> </button>
+                    </div>
+                    <p>Transform Your Career with Professional IT Training Programs.</p>
+                    <a href="#training-programs" class="btn_hover1">Explore Programs</a>
+                    <hr>
+                    <h4>Connected details:</h4>
+                    <ul class="flex">
+                        <li>
+                            <a href="#"> <i class="fa-solid fa-phone"></i></a>
+                            <a href="tel:+94774910630" class="text-lowercase">+94 774 910 630</a>
+                        </li>
+                        <li>
+                            <a href="#"> <i class="fa-regular fa-envelope"></i></a>
+                            <a href="mailto:info@techxdoz.com" style="text-transform: lowercase;">info@techxdoz.com</a>
+                        </li>
+                        <li>
+                            <a href="#"> <i class="fa-sharp fa-regular fa-clock"></i></a>
+                            <a href="#">Office Hours: Always Open</a>
+                        </li>
+                    </ul>
+                </section>
+            </header>
+            <!-- ====== End of Header section ====== -->
+            
+            <!-- ====== Hero section ====== -->
+            <section class="hero">
+                <div class="container" data-aos="zoom-in">
+                    <div>
+                        <div class="hero-social-icon flex">
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <hr class="d-md-block d-sm-none d-none">
+                        </div>
+                        <div class="center-data">
+                            <h1>Professional Training<br>
+                                Programs</h1>
+                            <h3>Industry-Leading Courses | Expert Instructors | Career Transformation<br> 
+                                Accelerate Your Tech Career with Cutting-Edge Training</h3>
+                            <div class="center-btn flex">
+                                <a href="#training-programs" class="btn_hover1">Browse Programs</a>
+                                <a href="trainers.html" class="btn_hover2">Meet Our Experts</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ====== End of Hero section ====== -->
+        </div>
+        
+        <!-- ====== Training Excellence section ====== -->
+        <section class="training-excellence">
+            <div class="container">
+                <div class="training-intro text-center" data-aos="fade-up">
+                    <div class="flex gap-1 justify-center">
+                        <hr class="section-hr">
+                        <h5>TRAINING EXCELLENCE</h5>
+                        <hr class="section-hr">
+                    </div>
+                    <h2 class="mt-15">Transforming Careers Through Technology Education</h2>
+                    <p class="mt-15">Join thousands of professionals who have advanced their careers with our industry-leading training programs. Experience hands-on learning with real-world projects and expert mentorship from top tech companies.</p>
+                </div>
+                
+                <div class="training-stats-redesigned flex" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-card-redesigned">
+                        <div class="stat-icon-redesigned">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div class="stat-content-redesigned">
+                            <div class="stat-number-redesigned">
+                                <span class="counter" data-count="5000">0</span>
+                                <span class="plus">+</span>
+                            </div>
+                            <h4>Students Trained</h4>
+                            <p>Successfully completed programs</p>
+                        </div>
+                        <div class="stat-decoration"></div>
+                    </div>
+                    <div class="stat-card-redesigned">
+                        <div class="stat-icon-redesigned">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <div class="stat-content-redesigned">
+                            <div class="stat-number-redesigned">
+                                <span class="counter" data-count="98">0</span>
+                                <span class="plus">%</span>
+                            </div>
+                            <h4>Job Placement Rate</h4>
+                            <p>Within 6 months of completion</p>
+                        </div>
+                        <div class="stat-decoration"></div>
+                    </div>
+                    <div class="stat-card-redesigned">
+                        <div class="stat-icon-redesigned">
+                            <i class="fa-solid fa-certificate"></i>
+                        </div>
+                        <div class="stat-content-redesigned">
+                            <div class="stat-number-redesigned">
+                                <span class="counter" data-count="35">0</span>
+                                <span class="plus">+</span>
+                            </div>
+                            <h4>Professional Courses</h4>
+                            <p>Industry-focused programs</p>
+                        </div>
+                        <div class="stat-decoration"></div>
+                    </div>
+                    <div class="stat-card-redesigned">
+                        <div class="stat-icon-redesigned">
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="stat-content-redesigned">
+                            <div class="stat-number-redesigned">
+                                <span class="counter" data-count="4">0</span>
+                                <span class="plus">.8/5</span>
+                            </div>
+                            <h4>Student Satisfaction</h4>
+                            <p>Average course rating</p>
+                        </div>
+                        <div class="stat-decoration"></div>
+                    </div>
+                </div>
+                
+                <div class="training-benefits" data-aos="fade-up" data-aos-delay="400">
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fa-solid fa-rocket"></i>
+                            </div>
+                            <h4>Fast-Track Learning</h4>
+                            <p>Accelerated programs designed for quick skill acquisition and career advancement</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fa-solid fa-user-tie"></i>
+                            </div>
+                            <h4>Expert Mentorship</h4>
+                            <p>Personal guidance from industry professionals with 10+ years experience</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fa-solid fa-project-diagram"></i>
+                            </div>
+                            <h4>Real-World Projects</h4>
+                            <p>Build impressive portfolios with actual industry projects and case studies</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fa-solid fa-infinity"></i>
+                            </div>
+                            <h4>Lifetime Access</h4>
+                            <p>Continuous learning with updated content and ongoing support</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ====== Training Programs section ====== -->
+        <section class="training-programs" id="training-programs">
+            <div class="container">
+                <div class="section-header text-center" data-aos="fade-up">
+                    <div class="flex gap-1 justify-center">
+                        <hr class="section-hr">
+                        <h5>TRAINING PROGRAMS</h5>
+                        <hr class="section-hr">
+                    </div>
+                    <h2 class="mt-15">Choose Your Path to Tech Success</h2>
+                    <p class="mt-15">Comprehensive training programs designed by industry experts to prepare you for the most in-demand technology careers. From beginner to advanced levels.</p>
+                </div>
+                
+                <!-- Featured Programs -->
+                <div class="featured-programs-redesigned" data-aos="fade-up">
+                    <div class="section-header-redesigned">
+                        <div class="section-title-wrapper">
+                            <div class="section-icon">
+                                <i class="fa-solid fa-fire"></i>
+                            </div>
+                            <h3 class="category-title-redesigned">Most Popular Programs</h3>
+                        </div>
+                        <div class="section-subtitle">
+                            <p>Transform your career with our most sought-after training programs</p>
+                        </div>
+                    </div>
+                    <div class="programs-grid-redesigned">
+                        <div class="program-card-redesigned featured-premium">
+                            <div class="card-glow"></div>
+                            <div class="featured-badge-redesigned">
+                                <i class="fa-solid fa-crown"></i>
+                                <span>Most Popular</span>
+                            </div>
+                            <div class="program-header">
+                                <div class="program-icon-redesigned">
+                                    <i class="fa-solid fa-brain"></i>
+                                    <div class="icon-background"></div>
+                                </div>
+                                <div class="program-title-section">
+                                    <h4>AI & Machine Learning Mastery</h4>
+                                    <div class="program-meta">
+                                        <div class="program-duration-redesigned">
+                                            <i class="fa-solid fa-clock"></i>
+                                            <span>8 Months Intensive</span>
+                                        </div>
+                                        <div class="program-level-redesigned">
+                                            <i class="fa-solid fa-signal"></i>
+                                            <span>Intermediate to Advanced</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="program-description">Master artificial intelligence and machine learning with hands-on projects in deep learning, neural networks, computer vision, and NLP. Build AI solutions that solve real-world problems.</p>
+                            <div class="program-features-redesigned">
+                                <div class="feature-redesigned"><i class="fa-solid fa-check"></i> Python & TensorFlow/PyTorch</div>
+                                <div class="feature-redesigned"><i class="fa-solid fa-check"></i> Deep Learning & Neural Networks</div>
+                                <div class="feature-redesigned"><i class="fa-solid fa-check"></i> Computer Vision & NLP</div>
+                                <div class="feature-redesigned"><i class="fa-solid fa-check"></i> MLOps & Model Deployment</div>
+                                <div class="feature-redesigned"><i class="fa-solid fa-check"></i> Industry Capstone Project</div>
+                            </div>
+                            <div class="program-highlights-redesigned">
+                                <div class="highlight-item-redesigned">
+                                    <i class="fa-solid fa-trophy"></i>
+                                    <span>Industry Projects</span>
+                                </div>
+                                <div class="highlight-item-redesigned">
+                                    <i class="fa-solid fa-certificate"></i>
+                                    <span>Google Certified</span>
+                                </div>
+                                <div class="highlight-item-redesigned">
+                                    <i class="fa-solid fa-briefcase"></i>
+                                    <span>Job Guarantee</span>
+                                </div>
+                            </div>
+                            <div class="program-footer-redesigned">
+                                <div class="program-price-redesigned">
+                                    <span class="price-label">Investment</span>
+                                    <span class="price-amount">$2,499</span>
+                                </div>
+                                <a href="mailto:info@techxdoz.com" class="btn-enroll-redesigned">
+                                    <span>Enroll Now</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="program-card-redesigned featured-premium">
+                            <div class="card-glow"></div>
+                            <div class="featured-badge-redesigned high-demand">
+                                <i class="fa-solid fa-trending-up"></i>
+                                <span>High Demand</span>
+                            </div>
+                            <div class="program-header">
+                                <div class="program-icon-redesigned">
+                                    <i class="fa-brands fa-react"></i>
+                                    <div class="icon-background"></div>
+                                </div>
+                                <div class="program-title-section">
+                                    <h4>Full Stack Development Bootcamp</h4>
+                                    <div class="program-meta">
+                                        <div class="program-duration-redesigned">
+                                            <i class="fa-solid fa-clock"></i>
+                                            <span>6 Months Intensive</span>
+                                        </div>
+                                        <div class="program-level-redesigned">
+                                            <i class="fa-solid fa-signal"></i>
+                                            <span>Beginner to Advanced</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="program-description">Become a complete full-stack developer with modern technologies. Master both frontend and backend development, databases, cloud deployment, and build production-ready applications.</p>
+                            <div class="program-features-redesigned">
+                                <div class="feature-redesigned"><i class="fa-solid fa-check"></i> React, Node.js & MongoDB</div>
+                                <div class="feature-redesigned"><i class="fa-solid fa-check"></i> TypeScript & Next.js</div>
+                                <div class="feature-redesigned"><i class="fa-solid fa-check"></i> Database Design & APIs</div>
+                                <div class="feature-redesigned"><i class="fa-solid fa-check"></i> AWS Cloud Deployment</div>
+                                <div class="feature-redesigned"><i class="fa-solid fa-check"></i> DevOps & CI/CD</div>
+                            </div>
+                            <div class="program-highlights-redesigned">
+                                <div class="highlight-item-redesigned">
+                                    <i class="fa-solid fa-code"></i>
+                                    <span>5+ Projects</span>
+                                </div>
+                                <div class="highlight-item-redesigned">
+                                    <i class="fa-solid fa-users"></i>
+                                    <span>Team Collaboration</span>
+                                </div>
+                                <div class="highlight-item-redesigned">
+                                    <i class="fa-solid fa-rocket"></i>
+                                    <span>Portfolio Ready</span>
+                                </div>
+                            </div>
+                            <div class="program-footer-redesigned">
+                                <div class="program-price-redesigned">
+                                    <span class="price-label">Investment</span>
+                                    <span class="price-amount">$1,899</span>
+                                </div>
+                                <a href="mailto:info@techxdoz.com" class="btn-enroll-redesigned">
+                                    <span>Enroll Now</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Development Programs -->
+                <div class="program-category-redesigned" data-aos="fade-up" data-aos-delay="200">
+                    <div class="category-header-redesigned">
+                        <div class="category-icon-wrapper">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3 class="category-title-redesigned">Software Development</h3>
+                        <div class="category-line"></div>
+                    </div>
+                    <div class="programs-grid">
+                        <div class="program-card">
+                            <div class="program-icon">
+                                <i class="fa-brands fa-python"></i>
+                            </div>
+                            <h4>Python Development Pro</h4>
+                            <div class="program-duration">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>4 Months</span>
+                            </div>
+                            <div class="program-level">
+                                <i class="fa-solid fa-signal"></i>
+                                <span>Beginner to Intermediate</span>
+                            </div>
+                            <p>Master Python programming from fundamentals to advanced concepts including web frameworks, data analysis, automation, and API development.</p>
+                            <div class="program-features">
+                                <div class="feature"><i class="fa-solid fa-check"></i> Python Fundamentals & OOP</div>
+                                <div class="feature"><i class="fa-solid fa-check"></i> Django & Flask Frameworks</div>
+                                <div class="feature"><i class="fa-solid fa-check"></i> Data Analysis with Pandas</div>
+                                <div class="feature"><i class="fa-solid fa-check"></i> API Development & Testing</div>
+                            </div>
+                            <div class="program-footer">
+                                <div class="program-price">$1,299</div>
+                                <a href="mailto:info@techxdoz.com" class="btn_hover1">Enroll Now</a>
+                            </div>
+                        </div>
+                        
+                        <div class="program-card">
+                            <div class="program-icon">
+                                <i class="fa-brands fa-android"></i>
+                            </div>
+                            <h4>Mobile App Development</h4>
+                            <div class="program-duration">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>5 Months</span>
+                            </div>
+                            <div class="program-level">
+                                <i class="fa-solid fa-signal"></i>
+                                <span>Intermediate</span>
+                            </div>
+                            <p>Build native and cross-platform mobile applications using React Native and Flutter. Learn to publish apps on both App Store and Google Play.</p>
+                            <div class="program-features">
+                                <div class="feature"><i class="fa-solid fa-check"></i> React Native & Flutter</div>
+                                <div class="feature"><i class="fa-solid fa-check"></i> iOS & Android Development</div>
+                                <div class="feature"><i class="fa-solid fa-check"></i> App Store Publishing</div>
+                                <div class="feature"><i class="fa-solid fa-check"></i> Mobile UI/UX Design</div>
+                            </div>
+                            <div class="program-footer">
+                                <div class="program-price">$1,599</div>
+                                <a href="mailto:info@techxdoz.com" class="btn_hover1">Enroll Now</a>
+                            </div>
+                        </div>
+                        
+                        <div class="program-card">
+                            <div class="program-icon">
+                                <i class="fa-brands fa-java"></i>
+                            </div>
+                            <h4>Java Enterprise Development</h4>
+                            <div class="program-duration">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>6 Months</span>
+                            </div>
+                            <div class="program-level">
+                                <i class="fa-solid fa-signal"></i>
+                                <span>Intermediate to Advanced</span>
+                            </div>
+                            <p>Master Java enterprise development with Spring Boot, microservices architecture, and enterprise-grade application development.</p>
+                            <div class="program-features">
+                                <div class="feature"><i class="fa-solid fa-check"></i> Core Java & Advanced Concepts</div>
+                                <div class="feature"><i class="fa-solid fa-check"></i> Spring Boot & Spring Framework</div>
+                                <div class="feature"><i class="fa-solid fa-check"></i> Microservices Architecture</div>
+                                <div class="feature"><i class="fa-solid fa-check"></i> Database Integration</div>
+                            </div>
+                            <div class="program-footer">
+                                <div class="program-price">$1,799</div>
+                                <a href="mailto:info@techxdoz.com" class="btn_hover1">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Cloud & DevOps Programs -->
+                <div class="program-category-redesigned" data-aos="fade-up" data-aos-delay="400">
+                    <div class="category-header-redesigned">
+                        <div class="category-icon-wrapper">
+                            <i class="fa-solid fa-cloud"></i>
+                        </div>
+                        <h3 class="category-title-redesigned">Cloud & DevOps</h3>
+                        <div class="category-line"></div>
+                    </div>
+                    <div class="programs-grid">
+                        <div class="program-card">
+                            <div class="program-icon">
+                                <i class="fa-brands fa-aws"></i>
+                            </div>
+                            <h4>AWS Cloud Solutions Architect</h4>
+                            <div class="program-duration">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>4 Months</span>
+                            </div>
+                            <div class="program-level">
+                                <i class="fa-solid fa-signal"></i>
+                                <span>Intermediate</span>
+                            </div>
+                            <p>Master AWS cloud services and become a certified solutions architect. Learn to design, deploy, and manage scalable cloud infrastructure.</p>
+                            <div class="program-features">
+                                <div class="feature"><i class="fa-solid fa-check"></i> AWS Core Services</div>
+                                <div class="feature"><i class="fa-solid fa-check"></i> Cloud Architecture Design</div>
+                                <div class="feature"><i class="fa-solid fa-check"></i> Security & Compliance</div>
+                                <div class="feature"><i class="fa-solid fa-check"></i> Certification Preparation</div>
+                            </div>
+                            <div class="program-footer">
+                                <div class="program-price">$1,499</div>
+                                <a href="mailto:info@techxdoz.com" class="btn_hover1">Enroll Now</a>
+                            </div>
+                        </div>
+                        
+                        <div class="program-card">
+                            <div class="program-icon">
+                                <i class="fa-solid fa-infinity"></i>
+                            </div>
+                            <h4>DevOps Engineering Mastery</h4>
+                            <div class="program-duration">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>5 Months</span>
+                            </div>
+                            <div class="program-level">
+                                <i class="fa-solid fa-signal"></i>
+                                <span>Advanced</span>
+                            </div>
+                            <p>Learn complete DevOps practices including CI/CD, containerization, infrastructure as code, and automation tools for modern software delivery.</p>
+                            <div class="program-features">
+                                <div class="feature"><i class="fa-solid fa-check"></i> CI/CD Pipelines</div>
+                                <div class="feature"><i class="fa-solid fa-check"></i> Docker & Kubernetes</div>
+                                <div class="feature"><i class="fa-solid fa-check"></i> Infrastructure as Code</div>
+                                <div class="feature"><i class="fa-solid fa-check"></i> Monitoring & Logging</div>
+                            </div>
+                            <div class="program-footer">
+                                <div class="program-price">$1,699</div>
+                                <a href="mailto:info@techxdoz.com" class="btn_hover1">Enroll Now</a>
+                            </div>
+                        </div>
+                        
+                        <div class="program-card">
+                            <div class="program-icon">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <h4>Cybersecurity Specialist</h4>
+                            <div class="program-duration">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>6 Months</span>
+                            </div>
+                            <div class="program-level">
+                                <i class="fa-solid fa-signal"></i>
+                                <span>Intermediate to Advanced</span>
+                            </div>
+                            <p>Comprehensive cybersecurity training covering ethical hacking, network security, incident response, and security compliance.</p>
+                            <div class="program-features">
+                                <div class="feature"><i class="fa-solid fa-check"></i> Ethical Hacking & Penetration Testing</div>
+                                <div class="feature"><i class="fa-solid fa-check"></i> Network Security</div>
+                                <div class="feature"><i class="fa-solid fa-check"></i> Incident Response</div>
+                                <div class="feature"><i class="fa-solid fa-check"></i> Security Compliance</div>
+                            </div>
+                            <div class="program-footer">
+                                <div class="program-price">$1,899</div>
+                                <a href="mailto:info@techxdoz.com" class="btn_hover1">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Data Science & Analytics -->
+                <div class="program-category-redesigned" data-aos="fade-up" data-aos-delay="600">
+                    <div class="category-header-redesigned">
+                        <div class="category-icon-wrapper">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h3 class="category-title-redesigned">Data Science & Analytics</h3>
+                        <div class="category-line"></div>
+                    </div>
+                    <div class="programs-grid">
+                        <div class="program-card">
+                            <div class="program-icon">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <h4>Data Science & Analytics</h4>
+                            <div class="program-duration">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>6 Months</span>
+                            </div>
+                            <div class="program-level">
+                                <i class="fa-solid fa-signal"></i>
+                                <span>Intermediate</span>
+                            </div>
+                            <p>Master data analysis, visualization, and statistical modeling using Python, R, and advanced analytics tools to derive business insights.</p>
+                            <div class="program-features">
+                                <div class="feature"><i class="fa-solid fa-check"></i> Statistical Analysis & Modeling</div>
+                                <div class="feature"><i class="fa-solid fa-check"></i> Python & R Programming</div>
+                                <div class="feature"><i class="fa-solid fa-check"></i> Data Visualization</div>
+                                <div class="feature"><i class="fa-solid fa-check"></i> Big Data Technologies</div>
+                            </div>
+                            <div class="program-footer">
+                                <div class="program-price">$1,799</div>
+                                <a href="mailto:info@techxdoz.com" class="btn_hover1">Enroll Now</a>
+                            </div>
+                        </div>
+                        
+                        <div class="program-card">
+                            <div class="program-icon">
+                                <i class="fa-solid fa-database"></i>
+                            </div>
+                            <h4>Big Data Engineering</h4>
+                            <div class="program-duration">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>5 Months</span>
+                            </div>
+                            <div class="program-level">
+                                <i class="fa-solid fa-signal"></i>
+                                <span>Advanced</span>
+                            </div>
+                            <p>Design and implement big data solutions using Hadoop, Spark, Kafka, and cloud-based data platforms for large-scale data processing.</p>
+                            <div class="program-features">
+                                <div class="feature"><i class="fa-solid fa-check"></i> Hadoop Ecosystem</div>
+                                <div class="feature"><i class="fa-solid fa-check"></i> Apache Spark & Kafka</div>
+                                <div class="feature"><i class="fa-solid fa-check"></i> Data Pipeline Development</div>
+                                <div class="feature"><i class="fa-solid fa-check"></i> Cloud Data Platforms</div>
+                            </div>
+                            <div class="program-footer">
+                                <div class="program-price">$1,699</div>
+                                <a href="mailto:info@techxdoz.com" class="btn_hover1">Enroll Now</a>
+                            </div>
+                        </div>
+                        
+                        <div class="program-card">
+                            <div class="program-icon">
+                                <i class="fa-solid fa-chart-pie"></i>
+                            </div>
+                            <h4>Business Intelligence & Analytics</h4>
+                            <div class="program-duration">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>4 Months</span>
+                            </div>
+                            <div class="program-level">
+                                <i class="fa-solid fa-signal"></i>
+                                <span>Beginner to Intermediate</span>
+                            </div>
+                            <p>Learn to transform raw data into actionable business insights using modern BI tools, dashboards, and reporting systems.</p>
+                            <div class="program-features">
+                                <div class="feature"><i class="fa-solid fa-check"></i> Tableau & Power BI</div>
+                                <div class="feature"><i class="fa-solid fa-check"></i> SQL & Database Management</div>
+                                <div class="feature"><i class="fa-solid fa-check"></i> Dashboard Development</div>
+                                <div class="feature"><i class="fa-solid fa-check"></i> Business Analytics</div>
+                            </div>
+                            <div class="program-footer">
+                                <div class="program-price">$1,299</div>
+                                <a href="mailto:info@techxdoz.com" class="btn_hover1">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Design & Marketing -->
+                <div class="program-category-redesigned" data-aos="fade-up" data-aos-delay="800">
+                    <div class="category-header-redesigned">
+                        <div class="category-icon-wrapper">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+                        <h3 class="category-title-redesigned">Design & Digital Marketing</h3>
+                        <div class="category-line"></div>
+                    </div>
+                    <div class="programs-grid">
+                        <div class="program-card">
+                            <div class="program-icon">
+                                <i class="fa-solid fa-palette"></i>
+                            </div>
+                            <h4>UI/UX Design Mastery</h4>
+                            <div class="program-duration">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>4 Months</span>
+                            </div>
+                            <div class="program-level">
+                                <i class="fa-solid fa-signal"></i>
+                                <span>Beginner to Advanced</span>
+                            </div>
+                            <p>Master user-centered design principles, modern design tools, and create stunning interfaces that deliver exceptional user experiences.</p>
+                            <div class="program-features">
+                                <div class="feature"><i class="fa-solid fa-check"></i> Design Thinking & User Psychology</div>
+                                <div class="feature"><i class="fa-solid fa-check"></i> Figma & Adobe Creative Suite</div>
+                                <div class="feature"><i class="fa-solid fa-check"></i> Prototyping & User Testing</div>
+                                <div class="feature"><i class="fa-solid fa-check"></i> Design Systems</div>
+                            </div>
+                            <div class="program-footer">
+                                <div class="program-price">$1,399</div>
+                                <a href="mailto:info@techxdoz.com" class="btn_hover1">Enroll Now</a>
+                            </div>
+                        </div>
+                        
+                        <div class="program-card">
+                            <div class="program-icon">
+                                <i class="fa-solid fa-bullhorn"></i>
+                            </div>
+                            <h4>Digital Marketing Mastery</h4>
+                            <div class="program-duration">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>3 Months</span>
+                            </div>
+                            <div class="program-level">
+                                <i class="fa-solid fa-signal"></i>
+                                <span>Beginner to Intermediate</span>
+                            </div>
+                            <p>Complete digital marketing program covering SEO, SEM, social media marketing, content strategy, and analytics for business growth.</p>
+                            <div class="program-features">
+                                <div class="feature"><i class="fa-solid fa-check"></i> SEO & SEM Strategies</div>
+                                <div class="feature"><i class="fa-solid fa-check"></i> Social Media Marketing</div>
+                                <div class="feature"><i class="fa-solid fa-check"></i> Content Marketing</div>
+                                <div class="feature"><i class="fa-solid fa-check"></i> Analytics & ROI Tracking</div>
+                            </div>
+                            <div class="program-footer">
+                                <div class="program-price">$999</div>
+                                <a href="mailto:info@techxdoz.com" class="btn_hover1">Enroll Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ====== Why Choose Our Training section ====== -->
+        <section class="why-choose-training">
+            <div class="container">
+                <div class="section-header text-center" data-aos="fade-up">
+                    <h2>Why Choose TechXDoz Training?</h2>
+                    <p class="mt-15">We provide more than just courses - we provide complete career transformation</p>
+                </div>
+                
+                <div class="features-grid" data-aos="fade-up">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-chalkboard-teacher"></i>
+                        </div>
+                        <h4>Industry Expert Instructors</h4>
+                        <p>Learn from professionals with 10+ years of experience at top tech companies like Google, Microsoft, and Amazon</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h4>Hands-On Project Learning</h4>
+                        <p>Build real-world projects and create an impressive portfolio that showcases your skills to potential employers</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <h4>Job Placement Guarantee</h4>
+                        <p>95% job placement rate with dedicated career counseling, interview preparation, and industry connections</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-certificate"></i>
+                        </div>
+                        <h4>Industry Certifications</h4>
+                        <p>Prepare for and earn valuable industry certifications that are recognized by top employers worldwide</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <h4>Flexible Learning Options</h4>
+                        <p>Choose from full-time intensive, part-time evening, or weekend classes that fit your schedule and lifestyle</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <h4>Lifetime Support & Updates</h4>
+                        <p>Ongoing mentorship, access to updated course materials, and continuous support even after graduation</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ====== Success Stories section ====== -->
+        <section class="success-stories">
+            <div class="container">
+                <div class="section-header text-center" data-aos="fade-up">
+                    <div class="flex gap-1 justify-center">
+                        <hr class="section-hr">
+                        <h5>SUCCESS STORIES</h5>
+                        <hr class="section-hr">
+                    </div>
+                    <h2 class="mt-15">Our Students' Success Stories</h2>
+                    <p class="mt-15">Real transformations from our graduates who are now working at top tech companies worldwide</p>
+                </div>
+                
+                <div class="success-grid" data-aos="fade-up">
+                    <div class="success-card">
+                        <div class="success-image">
+                            <img src="Images/slider/team-slider1.png" alt="Sarah Johnson">
+                        </div>
+                        <div class="success-content">
+                            <div class="success-quote">
+                                <i class="fa-solid fa-quote-left"></i>
+                                <p>"TechXDoz's AI program completely transformed my career. From a marketing role to Senior ML Engineer at Google in just 8 months!"</p>
+                            </div>
+                            <div class="success-author">
+                                <h4>Sarah Johnson</h4>
+                                <span>Senior ML Engineer at Google</span>
+                                <div class="success-salary">
+                                    <i class="fa-solid fa-arrow-trend-up"></i>
+                                    <span>300% Salary Increase</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="success-card">
+                        <div class="success-image">
+                            <img src="Images/slider/team-slider2.png" alt="Michael Chen">
+                        </div>
+                        <div class="success-content">
+                            <div class="success-quote">
+                                <i class="fa-solid fa-quote-left"></i>
+                                <p>"The Full Stack program was intense but incredible. Now I'm building scalable applications at Microsoft and loving every moment of it."</p>
+                            </div>
+                            <div class="success-author">
+                                <h4>Michael Chen</h4>
+                                <span>Senior Software Engineer at Microsoft</span>
+                                <div class="success-salary">
+                                    <i class="fa-solid fa-arrow-trend-up"></i>
+                                    <span>250% Salary Increase</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="success-card">
+                        <div class="success-image">
+                            <img src="Images/slider/team-slider3.png" alt="David Rodriguez">
+                        </div>
+                        <div class="success-content">
+                            <div class="success-quote">
+                                <i class="fa-solid fa-quote-left"></i>
+                                <p>"The cybersecurity training was world-class. I went from IT support to Cybersecurity Lead at Amazon. The hands-on labs were game-changing!"</p>
+                            </div>
+                            <div class="success-author">
+                                <h4>David Rodriguez</h4>
+                                <span>Cybersecurity Lead at Amazon</span>
+                                <div class="success-salary">
+                                    <i class="fa-solid fa-arrow-trend-up"></i>
+                                    <span>400% Salary Increase</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-30" data-aos="fade-up">
+                    <a href="trainers.html" class="btn_hover1">Meet Our Expert Trainers</a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ====== Footer section ====== -->
+        <footer>
+            <div class="container">
+                <div class="footer-hr flex flex-col">
+                    <div class="flex gap-1" data-aos="fade-left">
+                        <hr>
+                        <h6>Newsletter</h6>
+                    </div>
+                    <h3>START YOUR TECH CAREER TODAY</h3>
+                    <p class="text-center">Subscribe to get notified about new training programs, special offers, and career opportunities delivered to your inbox.</p>
+                </div>
+                <form id="footer-form" class="flex flex-sb gap-2" data-aos="zoom-in" data-aos-delay="400">
+                    <div id="footer-message"></div>
+                    <input type="email" required placeholder="Enter Your Email">
+                    <button type="submit" class="btn_hover1">Get Started</button>
+                </form>
+            </div>
+            <div class="footer-menu">
+                <div class="container">
+                    <div class="flex flex-start footer-center">
+                        <div class="w-33 flex flex-col gap-2 flex-start">
+                            <a href="index.html"><img src="Images/logo.png" alt="footer-logo"></a>
+                            <p><b>TechXDoz</b> - Your gateway to a successful tech career. Transform your future with our industry-leading training programs and expert mentorship.</p>
+                        </div>
+                        <div class="w-16 mt-1">
+                            <h4>Quick Links</h4>
+                            <ul class="flex flex-col gap-2 flex-start">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="index.html#about-section">About</a></li>
+                                <li><a href="index.html#service-section">Services</a></li>
+                                <li><a href="training.html">Training</a></li>
+                            </ul>
+                        </div>
+                        <div class="w-16 mt-45 flex-end">
+                            <ul class="flex flex-col gap-2 flex-start">
+                                <li><a href="trainers.html">Trainers</a></li>
+                                <li><a href="index.html#testimonials-section">Success Stories</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="w-33 mt-1 flex flex-col flex-start">
+                            <h4>Get Connected</h4>
+                            <ul class="flex flex-col gap-2 flex-start">
+                                <li>
+                                    <a href="#"> <i class="fa-solid fa-phone"></i></a>
+                                    <a href="tel:+94774910630" class="text-lowercase">+94 774 910 630</a>
+                                </li>
+                                <li>
+                                    <a href="#"> <i class="fa-regular fa-envelope"></i></a>
+                                    <a href="mailto:info@techxdoz.com" style="text-transform: lowercase;">info@techxdoz.com</a>
+                                </li>
+                                <li>
+                                    <a href="#"> <i class="fa-sharp fa-regular fa-clock"></i></a>
+                                    <a href="#">Office Hours: Always Open</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="container flex flex-sb gap-2 flex-wrap">
+                    <h6>Copyright © 2025 Professional Training By <a href="https://techxdoz.com/" class="p-0">TECHXDOZ.</a></h6>
+                    <h6>Powered By <b>TECHXDOZ</b></h6>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- button back to top -->
+    <button onclick="scrollToTop()" id="backToTopBtn" class="btn_hover2"><i class="fa-solid fa-arrow-turn-up"></i></button>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 150,
+            duration: 1250,
+            once: true,
+        });
+    </script>
+
+    <!-- jquery js cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- slick carousel min js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- custom js -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html> 
