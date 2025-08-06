@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert Trainers - TechXDoz</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/easy.css">
+    <link rel="stylesheet" href="css/slick.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="shortcut icon" href="Images/fave_icon.png" type="image/x-icon">
+
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- Animated Cursor -->
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+    <div class="cursor-wave cursor-wave-1"></div>
+    <div class="cursor-wave cursor-wave-2"></div>
+    <div class="cursor-wave cursor-wave-3"></div>
+    
+    <!-- Start site wrapper -->
+    <div class="site-wrapper">
+        <div class="header-index">
+            <!-- ====== Header section ====== -->
+            <header>
+                <nav class="container navbar">
+                    <div class="container-nav flex">
+                        <!-- site logo -->
+                        <a class="navbar-logo" href="index.html"><img src="Images/logo.png" alt="logo"></a>
+                        <button class="navbar-toggler" onclick="openNav()" type="button">
+                            <span class="fa-solid fa-bars"></span>
+                        </button>
+                        <!-- menus -->
+                        <ul class="navbar-nav flex">
+                            <li><a class="nav-link" href="index.html">Home</a></li>
+                            <li><a class="nav-link" href="index.html#about-section">About</a></li>
+                            <li><a class="nav-link" href="index.html#service-section">Services</a></li>
+                            <li><a class="nav-link" href="training.html">Training</a></li>
+                            <li><a class="nav-link active" href="trainers.html">Trainers</a></li>
+                            <li><a class="nav-link" href="mailto:info@techxdoz.com">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="flex nav-right">
+                        <p>CONTACT: <span>+94 774 910 630</span></p>
+                        <!-- header buttons -->
+                        <i onclick="open_search_bar()" class="fa-solid fa-magnifying-glass"></i>
+                        <i onclick="open_right_side()" class="fa-solid fa-bars"></i>
+                    </div>
+                </nav>
+                
+                <!-- Sidebar -->
+                <aside id="mySidepanel" class="sidepanel">
+                    <div class="sidebar flex">
+                        <a href="index.html"><img src="Images/logo.png" alt="logo"></a>
+                        <button class="closebtn btn_hover1" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                    <div>
+                        <ul>
+                            <li><a class="nav-link" href="index.html">Home</a></li>
+                            <li><a class="nav-link" href="index.html#about-section">About</a></li>
+                            <li><a class="nav-link" href="index.html#service-section">Services</a></li>
+                            <li><a class="nav-link" href="training.html">Training</a></li>
+                            <li><a class="nav-link active" href="trainers.html">Trainers</a></li>
+                            <li><a class="nav-link" href="mailto:info@techxdoz.com">Contact</a></li>
+                        </ul>
+                    </div>
+                </aside>
+
+                <!-- searchbar -->
+                <div id="search-bar">
+                    <div class="btn_hover1" onclick="close_search_bar()"><i class="fa-solid fa-xmark"></i></div>
+                    <form method="search" action="#">
+                        <input type="search" required placeholder="Search...">
+                        <button type="submit" class="btn_hover1">Search</button>
+                    </form>
+                </div>
+
+                <!-- Right Sidebar -->
+                <section class="header-right-sidebar" id="right_side">
+                    <div class="flex flex-sb">
+                        <a href="index.html"><img src="Images/right-side-logo.png" alt="logo"></a>
+                        <button class="close_right_sidebar fa-solid fa-xmark" onclick="close_right_sade()"> </button>
+                    </div>
+                    <p>Meet Our Expert Trainers - Industry Professionals Committed to Your Success.</p>
+                    <a href="#trainers-team" class="btn_hover1">Meet The Team</a>
+                    <hr>
+                    <h4>Connected details:</h4>
+                    <ul class="flex">
+                        <li>
+                            <a href="#"> <i class="fa-solid fa-phone"></i></a>
+                            <a href="tel:+94774910630" class="text-lowercase">+94 774 910 630</a>
+                        </li>
+                        <li>
+                            <a href="#"> <i class="fa-regular fa-envelope"></i></a>
+                            <a href="mailto:info@techxdoz.com" style="text-transform: lowercase;">info@techxdoz.com</a>
+                        </li>
+                        <li>
+                            <a href="#"> <i class="fa-sharp fa-regular fa-clock"></i></a>
+                            <a href="#">Office Hours: Always Open</a>
+                        </li>
+                    </ul>
+                </section>
+            </header>
+            <!-- ====== End of Header section ====== -->
+            
+            <!-- ====== Hero section ====== -->
+            <section class="hero">
+                <div class="container" data-aos="zoom-in">
+                    <div>
+                        <div class="hero-social-icon flex">
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <hr class="d-md-block d-sm-none d-none">
+                        </div>
+                        <div class="center-data">
+                            <h1>Expert Trainers<br>
+                                & Industry Leaders</h1>
+                            <h3>10+ Years Experience | Industry Certified | Proven Track Record<br> 
+                                Learn from the Best in the Technology Industry</h3>
+                            <div class="center-btn flex">
+                                <a href="#trainers-team" class="btn_hover1">Meet Our Trainers</a>
+                                <a href="training.html" class="btn_hover2">View Programs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ====== End of Hero section ====== -->
+        </div>
+        
+        <!-- ====== Trainers Overview section ====== -->
+        <section class="trainers-overview">
+            <div class="container">
+                <div class="trainers-intro text-center" data-aos="fade-up">
+                    <div class="flex gap-1 justify-center">
+                        <hr class="section-hr">
+                        <h5>OUR EXPERTISE</h5>
+                        <hr class="section-hr">
+                    </div>
+                    <h2 class="mt-15">Industry-Leading Training Excellence</h2>
+                    <p class="mt-15">Our team of expert trainers brings decades of combined experience from top technology companies, ensuring you receive world-class education and mentorship.</p>
+                </div>
+                
+                <div class="trainers-stats flex" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h3>5,000+</h3>
+                        <p>Students Trained</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <h3>98%</h3>
+                        <p>Job Placement Rate</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-book"></i>
+                        </div>
+                        <h3>35+</h3>
+                        <p>Professional Courses</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h3>4.8/5</h3>
+                        <p>Student Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ====== Trainers Team section ====== -->
+        <section class="trainers-team" id="trainers-team">
+            <div class="container">
+                <div class="section-header text-center" data-aos="fade-up">
+                    <div class="flex gap-1 justify-center">
+                        <hr class="section-hr">
+                        <h5>OUR TRAINERS</h5>
+                        <hr class="section-hr">
+                    </div>
+                    <h2 class="mt-15">Meet Our Expert Team</h2>
+                    <p class="mt-15">Industry professionals with extensive real-world experience, dedicated to transforming careers through quality education and mentorship.</p>
+                </div>
+                
+                <!-- Senior Trainers -->
+                <div class="trainers-category" data-aos="fade-up">
+                    <h3 class="category-title">Senior Technical Trainers</h3>
+                    <div class="trainers-grid">
+                        <div class="trainer-card">
+                            <div class="trainer-image">
+                                <img src="Images/slider/team-slider1.png" alt="Dr. Sarah Mitchell">
+                                <div class="trainer-overlay">
+                                    <div class="trainer-social">
+                                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                        <a href="mailto:sarah@techxdoz.com"><i class="fa-solid fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="trainer-info">
+                                <h4>Dr. Sarah Mitchell</h4>
+                                <span class="trainer-title">Senior AI/ML Trainer & Research Director</span>
+                                <div class="trainer-experience">
+                                    <i class="fa-solid fa-briefcase"></i>
+                                    <span>12 Years Experience</span>
+                                </div>
+                                <p>Former Google AI Research Scientist with PhD in Computer Science. Specializes in Deep Learning, Neural Networks, and Computer Vision. Published 20+ research papers.</p>
+                                <div class="trainer-skills">
+                                    <div class="skill-tag">Machine Learning</div>
+                                    <div class="skill-tag">Deep Learning</div>
+                                    <div class="skill-tag">Python</div>
+                                    <div class="skill-tag">TensorFlow</div>
+                                    <div class="skill-tag">Computer Vision</div>
+                                </div>
+                                <div class="trainer-certifications">
+                                    <div class="cert-item">
+                                        <i class="fa-solid fa-certificate"></i>
+                                        <span>Google Cloud Professional ML Engineer</span>
+                                    </div>
+                                    <div class="cert-item">
+                                        <i class="fa-solid fa-certificate"></i>
+                                        <span>AWS Machine Learning Specialty</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="trainer-card">
+                            <div class="trainer-image">
+                                <img src="Images/slider/team-slider2.png" alt="Michael Chen">
+                                <div class="trainer-overlay">
+                                    <div class="trainer-social">
+                                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                        <a href="mailto:michael@techxdoz.com"><i class="fa-solid fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="trainer-info">
+                                <h4>Michael Chen</h4>
+                                <span class="trainer-title">Full Stack Development Lead</span>
+                                <div class="trainer-experience">
+                                    <i class="fa-solid fa-briefcase"></i>
+                                    <span>10 Years Experience</span>
+                                </div>
+                                <p>Ex-Microsoft Senior Software Engineer and Tech Lead. Expert in modern web technologies, cloud architecture, and agile development practices. Built scalable applications serving millions of users.</p>
+                                <div class="trainer-skills">
+                                    <div class="skill-tag">React</div>
+                                    <div class="skill-tag">Node.js</div>
+                                    <div class="skill-tag">AWS</div>
+                                    <div class="skill-tag">MongoDB</div>
+                                    <div class="skill-tag">DevOps</div>
+                                </div>
+                                <div class="trainer-certifications">
+                                    <div class="cert-item">
+                                        <i class="fa-solid fa-certificate"></i>
+                                        <span>AWS Solutions Architect Professional</span>
+                                    </div>
+                                    <div class="cert-item">
+                                        <i class="fa-solid fa-certificate"></i>
+                                        <span>Microsoft Azure Expert</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="trainer-card featured">
+                            <div class="featured-badge">Lead Trainer</div>
+                            <div class="trainer-image">
+                                <img src="Images/slider/team-slider3.png" alt="David Rodriguez">
+                                <div class="trainer-overlay">
+                                    <div class="trainer-social">
+                                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                        <a href="mailto:david@techxdoz.com"><i class="fa-solid fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="trainer-info">
+                                <h4>David Rodriguez</h4>
+                                <span class="trainer-title">Cybersecurity Expert & Ethical Hacker</span>
+                                <div class="trainer-experience">
+                                    <i class="fa-solid fa-briefcase"></i>
+                                    <span>15 Years Experience</span>
+                                </div>
+                                <p>Former FBI Cybersecurity Consultant and CISO at Fortune 500 companies. Leading expert in ethical hacking, penetration testing, and security architecture.</p>
+                                <div class="trainer-skills">
+                                    <div class="skill-tag">Ethical Hacking</div>
+                                    <div class="skill-tag">Penetration Testing</div>
+                                    <div class="skill-tag">Security Architecture</div>
+                                    <div class="skill-tag">Incident Response</div>
+                                    <div class="skill-tag">Compliance</div>
+                                </div>
+                                <div class="trainer-certifications">
+                                    <div class="cert-item">
+                                        <i class="fa-solid fa-certificate"></i>
+                                        <span>CISSP (Certified Information Systems Security Professional)</span>
+                                    </div>
+                                    <div class="cert-item">
+                                        <i class="fa-solid fa-certificate"></i>
+                                        <span>CEH (Certified Ethical Hacker)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Specialized Trainers -->
+                <div class="trainers-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="category-title">Specialized Domain Experts</h3>
+                    <div class="trainers-grid">
+                        <div class="trainer-card">
+                            <div class="trainer-image">
+                                <img src="Images/slider/team-slider5.png" alt="Emma Thompson">
+                                <div class="trainer-overlay">
+                                    <div class="trainer-social">
+                                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                                        <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+                                        <a href="#"><i class="fa-brands fa-behance"></i></a>
+                                        <a href="mailto:emma@techxdoz.com"><i class="fa-solid fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="trainer-info">
+                                <h4>Emma Thompson</h4>
+                                <span class="trainer-title">UI/UX Design Director</span>
+                                <div class="trainer-experience">
+                                    <i class="fa-solid fa-briefcase"></i>
+                                    <span>8 Years Experience</span>
+                                </div>
+                                <p>Former Apple Design Team Lead and Airbnb Senior UX Designer. Expert in user-centered design, design systems, and product strategy. Winner of multiple design awards.</p>
+                                <div class="trainer-skills">
+                                    <div class="skill-tag">UI/UX Design</div>
+                                    <div class="skill-tag">Figma</div>
+                                    <div class="skill-tag">Design Systems</div>
+                                    <div class="skill-tag">User Research</div>
+                                    <div class="skill-tag">Prototyping</div>
+                                </div>
+                                <div class="trainer-certifications">
+                                    <div class="cert-item">
+                                        <i class="fa-solid fa-certificate"></i>
+                                        <span>Google UX Design Certificate</span>
+                                    </div>
+                                    <div class="cert-item">
+                                        <i class="fa-solid fa-certificate"></i>
+                                        <span>Adobe Certified Expert</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="trainer-card">
+                            <div class="trainer-image">
+                                <img src="Images/slider/team-slider6.png" alt="Priya Patel">
+                                <div class="trainer-overlay">
+                                    <div class="trainer-social">
+                                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                        <a href="mailto:priya@techxdoz.com"><i class="fa-solid fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="trainer-info">
+                                <h4>Priya Patel</h4>
+                                <span class="trainer-title">Data Science & Analytics Expert</span>
+                                <div class="trainer-experience">
+                                    <i class="fa-solid fa-briefcase"></i>
+                                    <span>9 Years Experience</span>
+                                </div>
+                                <p>Former Netflix Data Scientist and Tesla Analytics Manager. Specializes in big data, statistical modeling, and business intelligence. Built ML models that generated $50M+ in revenue.</p>
+                                <div class="trainer-skills">
+                                    <div class="skill-tag">Data Science</div>
+                                    <div class="skill-tag">Python</div>
+                                    <div class="skill-tag">R</div>
+                                    <div class="skill-tag">SQL</div>
+                                    <div class="skill-tag">Tableau</div>
+                                </div>
+                                <div class="trainer-certifications">
+                                    <div class="cert-item">
+                                        <i class="fa-solid fa-certificate"></i>
+                                        <span>Google Cloud Professional Data Engineer</span>
+                                    </div>
+                                    <div class="cert-item">
+                                        <i class="fa-solid fa-certificate"></i>
+                                        <span>Tableau Desktop Certified Professional</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="trainer-card">
+                            <div class="trainer-image">
+                                <img src="Images/slider/team-slider7.png" alt="James Wilson">
+                                <div class="trainer-overlay">
+                                    <div class="trainer-social">
+                                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                        <a href="mailto:james@techxdoz.com"><i class="fa-solid fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="trainer-info">
+                                <h4>James Wilson</h4>
+                                <span class="trainer-title">DevOps & Cloud Architecture Specialist</span>
+                                <div class="trainer-experience">
+                                    <i class="fa-solid fa-briefcase"></i>
+                                    <span>11 Years Experience</span>
+                                </div>
+                                <p>Former Amazon Web Services Principal Solutions Architect and Netflix Platform Engineer. Expert in cloud migration, containerization, and CI/CD pipelines.</p>
+                                <div class="trainer-skills">
+                                    <div class="skill-tag">DevOps</div>
+                                    <div class="skill-tag">Kubernetes</div>
+                                    <div class="skill-tag">Docker</div>
+                                    <div class="skill-tag">Jenkins</div>
+                                    <div class="skill-tag">Terraform</div>
+                                </div>
+                                <div class="trainer-certifications">
+                                    <div class="cert-item">
+                                        <i class="fa-solid fa-certificate"></i>
+                                        <span>AWS Solutions Architect Professional</span>
+                                    </div>
+                                    <div class="cert-item">
+                                        <i class="fa-solid fa-certificate"></i>
+                                        <span>Kubernetes Administrator (CKA)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Industry Mentors -->
+                <div class="trainers-category" data-aos="fade-up" data-aos-delay="400">
+                    <h3 class="category-title">Industry Mentors & Consultants</h3>
+                    <div class="trainers-grid">
+                        <div class="trainer-card">
+                            <div class="trainer-image">
+                                <img src="Images/slider/team-slider8.png" alt="Alex Kumar">
+                                <div class="trainer-overlay">
+                                    <div class="trainer-social">
+                                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                                        <a href="#"><i class="fa-brands fa-github"></i></a>
+                                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                        <a href="mailto:alex@techxdoz.com"><i class="fa-solid fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="trainer-info">
+                                <h4>Alex Kumar</h4>
+                                <span class="trainer-title">Mobile Development Expert</span>
+                                <div class="trainer-experience">
+                                    <i class="fa-solid fa-briefcase"></i>
+                                    <span>7 Years Experience</span>
+                                </div>
+                                <p>Former Uber Senior Mobile Engineer and Instagram iOS Developer. Built mobile apps with 10M+ downloads. Expert in React Native, Flutter, and native iOS/Android development.</p>
+                                <div class="trainer-skills">
+                                    <div class="skill-tag">React Native</div>
+                                    <div class="skill-tag">Flutter</div>
+                                    <div class="skill-tag">iOS</div>
+                                    <div class="skill-tag">Android</div>
+                                    <div class="skill-tag">Swift</div>
+                                </div>
+                                <div class="trainer-certifications">
+                                    <div class="cert-item">
+                                        <i class="fa-solid fa-certificate"></i>
+                                        <span>Google Associate Android Developer</span>
+                                    </div>
+                                    <div class="cert-item">
+                                        <i class="fa-solid fa-certificate"></i>
+                                        <span>Apple iOS App Development with Swift</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="trainer-card">
+                            <div class="trainer-image">
+                                <img src="Images/slider/team-slider9.png" alt="Lisa Zhang">
+                                <div class="trainer-overlay">
+                                    <div class="trainer-social">
+                                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                        <a href="mailto:lisa@techxdoz.com"><i class="fa-solid fa-envelope"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="trainer-info">
+                                <h4>Lisa Zhang</h4>
+                                <span class="trainer-title">Digital Marketing Strategist</span>
+                                <div class="trainer-experience">
+                                    <i class="fa-solid fa-briefcase"></i>
+                                    <span>6 Years Experience</span>
+                                </div>
+                                <p>Former Google Ads Product Manager and Facebook Marketing Lead. Managed $100M+ in ad spend and helped scale startups from $0 to $50M revenue through digital marketing.</p>
+                                <div class="trainer-skills">
+                                    <div class="skill-tag">SEO/SEM</div>
+                                    <div class="skill-tag">Google Ads</div>
+                                    <div class="skill-tag">Facebook Ads</div>
+                                    <div class="skill-tag">Analytics</div>
+                                    <div class="skill-tag">Content Strategy</div>
+                                </div>
+                                <div class="trainer-certifications">
+                                    <div class="cert-item">
+                                        <i class="fa-solid fa-certificate"></i>
+                                        <span>Google Ads Certified</span>
+                                    </div>
+                                    <div class="cert-item">
+                                        <i class="fa-solid fa-certificate"></i>
+                                        <span>Facebook Blueprint Certified</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ====== Why Choose Our Trainers section ====== -->
+        <section class="why-choose-trainers">
+            <div class="container">
+                <div class="section-header text-center" data-aos="fade-up">
+                    <h2>Why Learn from TechXDoz Trainers?</h2>
+                    <p class="mt-15">Our trainers bring real-world industry experience directly to your learning journey</p>
+                </div>
+                
+                <div class="features-grid" data-aos="fade-up">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-building"></i>
+                        </div>
+                        <h4>Industry Experience</h4>
+                        <p>All trainers have worked at top tech companies like Google, Microsoft, Amazon, and Apple</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-project-diagram"></i>
+                        </div>
+                        <h4>Real-World Projects</h4>
+                        <p>Learn through actual case studies and projects from their professional experience</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-user-graduate"></i>
+                        </div>
+                        <h4>Personalized Mentoring</h4>
+                        <p>One-on-one guidance and career counseling from industry veterans</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <h4>Industry Network</h4>
+                        <p>Access to professional networks and job opportunities through trainer connections</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <h4>Current Practices</h4>
+                        <p>Learn the latest industry practices and technologies used by leading companies</p>
+                    </div>
+                    
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fa-solid fa-handshake"></i>
+                        </div>
+                        <h4>Ongoing Support</h4>
+                        <p>Continued mentorship even after course completion to ensure your success</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- ====== Footer section ====== -->
+        <footer>
+            <div class="container">
+                <div class="footer-hr flex flex-col">
+                    <div class="flex gap-1" data-aos="fade-left">
+                        <hr>
+                        <h6>Connect</h6>
+                    </div>
+                    <h3>LEARN FROM THE BEST</h3>
+                    <p class="text-center">Connect with our expert trainers and start your journey to becoming a technology professional.</p>
+                </div>
+                <form id="footer-form" class="flex flex-sb gap-2" data-aos="zoom-in" data-aos-delay="400">
+                    <div id="footer-message"></div>
+                    <input type="email" required placeholder="Enter Your Email for Trainer Updates">
+                    <button type="submit" class="btn_hover1">Connect</button>
+                </form>
+            </div>
+            <div class="footer-menu">
+                <div class="container">
+                    <div class="flex flex-start footer-center">
+                        <div class="w-33 flex flex-col gap-2 flex-start">
+                            <a href="index.html"><img src="Images/logo.png" alt="footer-logo"></a>
+                            <p><b>TechXDoz</b> - Where industry expertise meets exceptional education. Our trainers are committed to your professional growth and success.</p>
+                        </div>
+                        <div class="w-16 mt-1">
+                            <h4>Quick Links</h4>
+                            <ul class="flex flex-col gap-2 flex-start">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="index.html#about-section">About</a></li>
+                                <li><a href="index.html#service-section">Services</a></li>
+                                <li><a href="training.html">Training</a></li>
+                            </ul>
+                        </div>
+                        <div class="w-16 mt-45 flex-end">
+                            <ul class="flex flex-col gap-2 flex-start">
+                                <li><a href="trainers.html">Trainers</a></li>
+                                <li><a href="index.html#testimonials-section">Testimonials</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                        <div class="w-33 mt-1 flex flex-col flex-start">
+                            <h4>Get Connected</h4>
+                            <ul class="flex flex-col gap-2 flex-start">
+                                <li>
+                                    <a href="#"> <i class="fa-solid fa-phone"></i></a>
+                                    <a href="tel:+94774910630" class="text-lowercase">+94 774 910 630</a>
+                                </li>
+                                <li>
+                                    <a href="#"> <i class="fa-regular fa-envelope"></i></a>
+                                    <a href="mailto:info@techxdoz.com" style="text-transform: lowercase;">info@techxdoz.com</a>
+                                </li>
+                                <li>
+                                    <a href="#"> <i class="fa-sharp fa-regular fa-clock"></i></a>
+                                    <a href="#">Office Hours: Always Open</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <div class="container flex flex-sb gap-2 flex-wrap">
+                    <h6>Copyright © 2025 Expert Trainers By <a href="https://techxdoz.com/" class="p-0">TECHXDOZ.</a></h6>
+                    <h6>Powered By <b>TECHXDOZ</b></h6>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- button back to top -->
+    <button onclick="scrollToTop()" id="backToTopBtn" class="btn_hover2"><i class="fa-solid fa-arrow-turn-up"></i></button>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 150,
+            duration: 1250,
+            once: true,
+        });
+    </script>
+
+    <!-- jquery js cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- slick carousel min js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <!-- custom js -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html> 
