@@ -5355,18 +5355,7 @@ mark {
 }
 
 /* Regular Program Cards Dark Blue Hover Effects - Override existing styles */
-.program-category-redesigned .program-card,
-.program-category .program-card {
-    position: relative !important;
-    background: linear-gradient(145deg, #1a1a2e, #16213e) !important;
-    border: 1px solid rgba(70, 130, 180, 0.3) !important;
-    border-radius: 20px !important;
-    padding: 30px !important;
-    overflow: hidden !important;
-    transition: all 0.4s ease !important;
-    backdrop-filter: blur(10px) !important;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
-}
+/* Styles moved above */
 
 .program-category-redesigned .program-card::before,
 .program-category .program-card::before {
@@ -5402,14 +5391,14 @@ mark {
 
 .program-category-redesigned .program-card .program-icon,
 .program-category .program-card .program-icon {
-    width: 70px !important;
-    height: 70px !important;
+    width: 60px !important;
+    height: 60px !important;
     background: linear-gradient(135deg, #2F4F4F, #1e3a5f) !important;
-    border-radius: 15px !important;
+    border-radius: 12px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    margin-bottom: 20px !important;
+    margin-bottom: 15px !important;
     transition: all 0.3s ease !important;
     box-shadow: 0 4px 15px rgba(70, 130, 180, 0.2) !important;
 }
@@ -5428,10 +5417,11 @@ mark {
 
 .program-card h4 {
     color: #ffffff;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 700;
-    margin: 15px 0;
+    margin: 12px 0;
     font-family: "Raleway", sans-serif;
+    line-height: 1.3;
 }
 
 .program-card .program-duration,
@@ -5451,14 +5441,15 @@ mark {
 
 .program-card p {
     color: #d3c9c1;
-    font-size: 15px;
-    line-height: 1.6;
-    margin: 15px 0;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 12px 0;
     opacity: 0.9;
 }
 
 .program-card .program-features {
-    margin: 20px 0;
+    margin: 15px 0;
+    flex-grow: 1;
 }
 
 .program-card .program-features .feature {
@@ -5480,13 +5471,13 @@ mark {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 25px;
+    margin-top: auto;
     padding-top: 20px;
     border-top: 1px solid rgba(70, 130, 180, 0.2);
 }
 
 .program-card .program-price {
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 800;
     color: #4682B4;
     font-family: "Raleway", sans-serif;
@@ -5518,10 +5509,11 @@ mark {
 .program-category-redesigned .program-card h4,
 .program-category .program-card h4 {
     color: #ffffff !important;
-    font-size: 22px !important;
+    font-size: 20px !important;
     font-weight: 700 !important;
-    margin: 15px 0 !important;
+    margin: 12px 0 !important;
     font-family: "Raleway", sans-serif !important;
+    line-height: 1.3 !important;
 }
 
 .program-category-redesigned .program-card .program-duration,
@@ -5546,10 +5538,16 @@ mark {
 .program-category-redesigned .program-card p,
 .program-category .program-card p {
     color: #d3c9c1 !important;
-    font-size: 15px !important;
-    line-height: 1.6 !important;
-    margin: 15px 0 !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+    margin: 12px 0 !important;
     opacity: 0.9 !important;
+}
+
+.program-category-redesigned .program-card .program-features,
+.program-category .program-card .program-features {
+    margin: 15px 0 !important;
+    flex-grow: 1 !important;
 }
 
 .program-category-redesigned .program-card .program-features .feature,
@@ -5574,31 +5572,108 @@ mark {
     display: flex !important;
     justify-content: space-between !important;
     align-items: center !important;
-    margin-top: 25px !important;
+    margin-top: auto !important;
     padding-top: 20px !important;
     border-top: 1px solid rgba(70, 130, 180, 0.2) !important;
 }
 
 .program-category-redesigned .program-card .program-price,
 .program-category .program-card .program-price {
-    font-size: 28px !important;
+    font-size: 24px !important;
     font-weight: 800 !important;
     color: #4682B4 !important;
     font-family: "Raleway", sans-serif !important;
 }
 
-.program-category-redesigned .program-card .program-icon i,
-.program-category .program-card .program-icon i {
-    font-size: 28px !important;
-    color: #ffffff !important;
+    .program-category-redesigned .program-card .program-icon i,
+    .program-category .program-card .program-icon i {
+        font-size: 24px !important;
+        color: #ffffff !important;
+    }
+
+/* Mobile responsive adjustments for program cards */
+@media (max-width: 768px) {
+    .programs-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .program-category-redesigned .programs-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .program-category-redesigned .program-card,
+    .program-category .program-card {
+        min-height: 400px !important;
+        padding: 20px !important;
+    }
+    
+    .program-card {
+        min-height: 400px;
+        padding: 20px;
+    }
+    
+    .program-card h4,
+    .program-category-redesigned .program-card h4,
+    .program-category .program-card h4 {
+        font-size: 18px !important;
+    }
+    
+    .program-card p,
+    .program-category-redesigned .program-card p,
+    .program-category .program-card p {
+        font-size: 13px !important;
+    }
 }
 
 /* Enhanced Category Headers */
 .program-category-redesigned .programs-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
-    padding: 0 20px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    align-items: stretch;
+}
+
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    align-items: stretch;
+}
+
+/* Regular Program Cards Dark Blue Hover Effects - Override existing styles */
+.program-category-redesigned .program-card,
+.program-category .program-card {
+    position: relative !important;
+    background: linear-gradient(145deg, #1a1a2e, #16213e) !important;
+    border: 1px solid rgba(70, 130, 180, 0.3) !important;
+    border-radius: 20px !important;
+    padding: 25px !important;
+    overflow: hidden !important;
+    transition: all 0.4s ease !important;
+    backdrop-filter: blur(10px) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    min-height: 450px !important;
+}
+
+.program-card {
+    background: linear-gradient(135deg, #1a1e46 0%, #2d1b69 100%);
+    border: 2px solid #87CEEB20;
+    border-radius: 25px;
+    padding: 25px;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 450px;
 }
 
 /* ============= End of Training Redesigned Styles ============= */
