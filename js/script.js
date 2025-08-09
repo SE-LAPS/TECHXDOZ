@@ -747,8 +747,45 @@ function getCategoryIcon(category) {
 // Navigate to search result
 function navigateToResult(url) {
     close_search_bar();
+    
     setTimeout(() => {
-        window.location.href = url;
+        // Check if it's a section link on the current page
+        if (url.includes('#') && (url.startsWith('index.html#') || url.startsWith('#'))) {
+            // Extract the section ID
+            const sectionId = url.split('#')[1];
+            const targetSection = document.getElementById(sectionId);
+            
+            if (targetSection) {
+                // If we're not on the index page, navigate there first
+                if (!window.location.pathname.includes('index.html') && window.location.pathname !== '/') {
+                    window.location.href = url;
+                    return;
+                }
+                
+                // Smooth scroll to the section with offset for fixed header
+                const headerOffset = 100; // Adjust based on your header height
+                const elementPosition = targetSection.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+                
+                // Add a brief highlight effect to the target section
+                targetSection.style.transition = 'background-color 0.3s ease';
+                targetSection.style.backgroundColor = 'rgba(74, 144, 226, 0.1)';
+                setTimeout(() => {
+                    targetSection.style.backgroundColor = '';
+                }, 2000);
+            } else {
+                // Fallback to regular navigation if section not found
+                window.location.href = url;
+            }
+        } else {
+            // For external pages or non-section links
+            window.location.href = url;
+        }
     }, 300);
 }
 
@@ -967,3 +1004,242 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
+// ============= Chatbot Functionality =============
+document.addEventListener('DOMContentLoaded', function() {
+    initChatbot();
+});
+
+function initChatbot() {
+    const chatbotToggle = document.getElementById('chatbot-toggle');
+    const chatbotWindow = document.getElementById('chatbot-window');
+    const chatbotClose = document.getElementById('chatbot-close');
+    const chatbotSend = document.getElementById('chatbot-send');
+    const chatbotInput = document.getElementById('chatbot-input-field');
+    const chatbotMessages = document.getElementById('chatbot-messages');
+
+    // Knowledge base for TechXDoz
+    const knowledgeBase = {
+        services: {
+            keywords: ['service', 'services', 'what do you offer', 'what can you do', 'solutions', 'development', 'design', 'marketing', 'seo', 'enterprise', 'mobile', 'web', 'software', 'custom', 'ai', 'ml', 'machine learning', 'artificial intelligence', 'cloud', 'devops'],
+            response: "TechXDoz offers comprehensive IT solutions including:\n\n🔹 Custom Software Development\n🔹 Web Development & Design\n🔹 Enterprise Solutions (ERP, CRM)\n🔹 Digital Marketing & SEO\n🔹 Mobile App Development\n🔹 Cloud Solutions & DevOps\n🔹 AI & ML Development\n🔹 Training & Coaching Programs\n\nWe specialize in delivering innovative, scalable solutions that accelerate business transformation."
+        },
+        training: {
+            keywords: ['training', 'course', 'courses', 'learn', 'education', 'program', 'programs', 'coaching', 'certification', 'skill', 'skills', 'development'],
+            response: "Our training programs include:\n\n📚 Full Stack Development\n📚 Mobile App Development\n📚 AI & Machine Learning\n📚 Cybersecurity\n📚 Digital Marketing\n📚 Cloud Technologies\n📚 DevOps\n📚 UI/UX Design\n\nWe offer both corporate training and individual coaching with hands-on projects and industry certification. Visit our Training page for more details!"
+        },
+        about: {
+            keywords: ['about', 'company', 'who are you', 'experience', 'team', 'history', 'techxdoz', 'years'],
+            response: "TechXDoz is a leading IT company with over 15 years of experience in the industry. We specialize in:\n\n✅ Innovative technology solutions\n✅ Professional training and development\n✅ Digital transformation services\n✅ Enterprise-grade applications\n\nOur experienced team of professionals is dedicated to helping businesses unlock their full potential through cutting-edge technology and comprehensive training programs."
+        },
+        contact: {
+            keywords: ['contact', 'phone', 'email', 'reach', 'call', 'address', 'location', 'hours', 'support'],
+            response: "Get in touch with us:\n\n📞 Phone: +94 774 910 630\n✉️ Email: info@techxdoz.com\n🕒 Office Hours: Always Open\n\nWe're here to help you with any questions about our services or training programs. Feel free to reach out anytime!"
+        },
+        pricing: {
+            keywords: ['price', 'pricing', 'cost', 'fee', 'budget', 'quote', 'estimate', 'how much', 'payment'],
+            response: "Our pricing is customized based on your specific requirements and project scope. We offer:\n\n💰 Competitive pricing models\n💰 Flexible payment options\n💰 Custom quotes for projects\n💰 ROI-driven solutions\n\nContact us at +94 774 910 630 or info@techxdoz.com for a detailed quote tailored to your needs."
+        },
+        technology: {
+            keywords: ['technology', 'tech', 'stack', 'framework', 'language', 'platform', 'tools', 'database'],
+            response: "We work with cutting-edge technologies including:\n\n🛠️ Frontend: React, Angular, Vue.js, HTML5, CSS3\n🛠️ Backend: Node.js, Python, Java, .NET, PHP\n🛠️ Mobile: React Native, Flutter, iOS, Android\n🛠️ Cloud: AWS, Azure, Google Cloud\n🛠️ Database: MySQL, PostgreSQL, MongoDB\n🛠️ AI/ML: TensorFlow, PyTorch, scikit-learn\n\nWe choose the right technology stack based on your project requirements."
+        },
+        portfolio: {
+            keywords: ['portfolio', 'projects', 'work', 'examples', 'case study', 'clients', 'previous work'],
+            response: "Our portfolio showcases diverse projects across:\n\n🎯 Enterprise applications\n🎯 E-commerce platforms\n🎯 Mobile applications\n🎯 Digital marketing campaigns\n🎯 Custom software solutions\n🎯 AI/ML implementations\n\nCheck out our Portfolio section on the website to see examples of our work across different industries."
+        },
+        process: {
+            keywords: ['process', 'workflow', 'methodology', 'approach', 'steps', 'how do you work'],
+            response: "Our proven 4-step process:\n\n1️⃣ Make An Appointment - Initial consultation\n2️⃣ Meet Our Team - Get to know our experts\n3️⃣ Get Consultation - Detailed project analysis\n4️⃣ Start Project - Begin development with regular updates\n\nWe follow agile methodologies with continuous communication and iterative delivery."
+        }
+    };
+
+    // Irrelevant topics that should trigger error messages
+    const irrelevantKeywords = [
+        'weather', 'sports', 'music', 'movies', 'food', 'cooking', 'recipe',
+        'politics', 'news', 'celebrity', 'gossip', 'games', 'entertainment',
+        'travel', 'vacation', 'relationship', 'dating', 'health', 'medical',
+        'doctor', 'medicine', 'animal', 'pet', 'fashion', 'shopping',
+        'car', 'automobile', 'real estate', 'investment', 'stock', 'crypto'
+    ];
+
+    // Toggle chatbot window
+    chatbotToggle.addEventListener('click', function() {
+        chatbotToggle.classList.toggle('active');
+        chatbotWindow.classList.toggle('active');
+        if (chatbotWindow.classList.contains('active')) {
+            setTimeout(() => chatbotInput.focus(), 300);
+            // Add bounce animation to toggle when opened
+            chatbotToggle.style.animation = 'bounce 0.6s ease';
+            setTimeout(() => {
+                chatbotToggle.style.animation = '';
+            }, 600);
+        }
+    });
+
+    // Close chatbot window
+    chatbotClose.addEventListener('click', function() {
+        chatbotToggle.classList.remove('active');
+        chatbotWindow.classList.remove('active');
+    });
+
+    // Send message on button click
+    chatbotSend.addEventListener('click', function() {
+        sendMessage();
+    });
+
+    // Send message on Enter key press
+    chatbotInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            sendMessage();
+        }
+    });
+
+    function sendMessage() {
+        const message = chatbotInput.value.trim();
+        if (!message) return;
+
+        // Add user message to chat
+        addMessage(message, 'user');
+        
+        // Clear input
+        chatbotInput.value = '';
+        
+        // Disable send button and add sending animation
+        chatbotSend.disabled = true;
+        chatbotSend.classList.add('sending');
+        
+        // Show typing indicator
+        showTypingIndicator();
+        
+        // Process and respond
+        setTimeout(() => {
+            hideTypingIndicator();
+            const response = processMessage(message);
+            addMessage(response.text, response.type);
+            chatbotSend.disabled = false;
+            chatbotSend.classList.remove('sending');
+            chatbotInput.focus();
+        }, 1000 + Math.random() * 1000); // Random delay between 1-2 seconds for realism
+    }
+
+    function addMessage(text, sender) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `${sender}-message`;
+        
+        const messageP = document.createElement('p');
+        messageP.textContent = text;
+        messageDiv.appendChild(messageP);
+        
+        chatbotMessages.appendChild(messageDiv);
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    }
+
+    function showTypingIndicator() {
+        const typingDiv = document.createElement('div');
+        typingDiv.className = 'typing-indicator';
+        typingDiv.id = 'typing-indicator';
+        
+        for (let i = 0; i < 3; i++) {
+            const dot = document.createElement('div');
+            dot.className = 'typing-dot';
+            typingDiv.appendChild(dot);
+        }
+        
+        chatbotMessages.appendChild(typingDiv);
+        chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    }
+
+    function hideTypingIndicator() {
+        const typingIndicator = document.getElementById('typing-indicator');
+        if (typingIndicator) {
+            typingIndicator.remove();
+        }
+    }
+
+    function processMessage(message) {
+        const lowerMessage = message.toLowerCase();
+        
+        // Check for irrelevant topics first
+        const isIrrelevant = irrelevantKeywords.some(keyword => 
+            lowerMessage.includes(keyword)
+        );
+        
+        if (isIrrelevant) {
+            return {
+                text: "I'm sorry, but I can only assist with questions related to TechXDoz services, training programs, technology solutions, and IT consulting. Please ask me about our web development, mobile apps, digital marketing, training courses, or other IT services.",
+                type: 'error'
+            };
+        }
+
+        // Check knowledge base for relevant responses
+        for (const [category, data] of Object.entries(knowledgeBase)) {
+            const hasKeyword = data.keywords.some(keyword => 
+                lowerMessage.includes(keyword)
+            );
+            
+            if (hasKeyword) {
+                return {
+                    text: data.response,
+                    type: 'bot'
+                };
+            }
+        }
+
+        // Greetings
+        if (lowerMessage.includes('hello') || lowerMessage.includes('hi') || 
+            lowerMessage.includes('hey') || lowerMessage.includes('good morning') ||
+            lowerMessage.includes('good afternoon') || lowerMessage.includes('good evening')) {
+            return {
+                text: "Hello! Welcome to TechXDoz. I'm here to help you learn about our IT solutions, training programs, and services. What would you like to know?",
+                type: 'bot'
+            };
+        }
+
+        // Help requests
+        if (lowerMessage.includes('help') || lowerMessage.includes('assist')) {
+            return {
+                text: "I can help you with information about:\n\n• Our IT services and solutions\n• Training programs and courses\n• Company information and experience\n• Contact details and pricing\n• Technology stack and portfolio\n• Our development process\n\nWhat specific information are you looking for?",
+                type: 'bot'
+            };
+        }
+
+        // Default response for unrecognized but potentially relevant queries
+        if (lowerMessage.length > 3) {
+            return {
+                text: "I'm not sure I understand your question completely. Could you please rephrase it or ask about:\n\n• Our services (web development, mobile apps, etc.)\n• Training programs\n• Company information\n• Contact details\n• Pricing information\n\nI'm here to help with TechXDoz-related queries!",
+                type: 'bot'
+            };
+        }
+
+        return {
+            text: "Please ask me a question about TechXDoz services, training programs, or how we can help your business grow with technology.",
+            type: 'bot'
+        };
+    }
+
+    // Close chatbot when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!chatbotToggle.contains(e.target) && 
+            !chatbotWindow.contains(e.target) && 
+            chatbotWindow.classList.contains('active')) {
+            chatbotToggle.classList.remove('active');
+            chatbotWindow.classList.remove('active');
+        }
+    });
+
+    // Add touch support for mobile devices
+    if ('ontouchstart' in window) {
+        chatbotToggle.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+            this.click();
+        });
+        
+        chatbotSend.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+            if (!this.disabled) {
+                this.click();
+            }
+        });
+    }
+}
