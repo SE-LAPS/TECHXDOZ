@@ -383,27 +383,26 @@ function open_img(evt, cityName) {
 
 
 // button back to top 
-// Back to top functionality removed
-/*
 window.onscroll = function () {
    scrollFunction()
 };
 
 function scrollFunction() {
-   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-       document.getElementById("backToTopBtn").style.display = "block";
-   } else {
-       document.getElementById("backToTopBtn").style.display = "none";
+   const backToTopBtn = document.getElementById("backToTopBtn");
+   if (backToTopBtn) {
+       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+           backToTopBtn.style.display = "block";
+       } else {
+           backToTopBtn.style.display = "none";
+       }
    }
 }
 
 function scrollToTop() {
-   const scrollToTopBtn = document.documentElement || document.body;
-   scrollToTopBtn.scrollIntoView({
+   document.documentElement.scrollIntoView({
        behavior: "smooth"
    });
 }
-*/
 
 
 // faq section
