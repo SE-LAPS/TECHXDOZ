@@ -1,4 +1,4 @@
-# Techxdoz 🚀
+<img width="1411" height="7534" alt="t-4" src="https://github.com/user-attachments/assets/08266108-6451-4d12-ae7f-d06874cd609f" /># Techxdoz 🚀
 
 **Leaders in IT Solutions for Over 15 Years** 💼
 
@@ -68,4 +68,13 @@ Ready to take your business to the next level? Reach out to us today!
 🌐 [https://techxdoz-website.web.app](https://techxdoz-website.web.app)
 <br><br>
 
-![Digital Services](https://github.com/user-attachments/assets/e88fb030-38ad-4629-8520-7fd532a73056)
+![Digital Services]
+
+<img width="1411" height="7534" alt="t-4" src="https://github.com/user-attachments/assets/55c0eaac-b5a0-4bc0-a9a1-28f9ea43d6cb" />
+
+
+
+
+
+
+
