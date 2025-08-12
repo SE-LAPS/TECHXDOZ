@@ -1,4 +1,4 @@
-<img width="1411" height="7534" alt="t-4" src="https://github.com/user-attachments/assets/08266108-6451-4d12-ae7f-d06874cd609f" /># Techxdoz 🚀
+# Techxdoz 🚀
 
 **Leaders in IT Solutions for Over 15 Years** 💼
 
