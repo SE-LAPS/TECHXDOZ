@@ -19,19 +19,37 @@ function initLoadingScreen() {
     const progressFill = document.querySelector('.progress-fill');
     const percentageDisplay = document.querySelector('.loading-percentage');
     const body = document.body;
+    const siteWrapper = document.querySelector('.site-wrapper');
+    
+    console.log('Initializing loading screen...'); // Debug log
+    
+    // Ensure loading screen is visible
+    if (loadingScreen) {
+        loadingScreen.style.display = 'flex';
+        loadingScreen.style.opacity = '1';
+        loadingScreen.style.visibility = 'visible';
+        loadingScreen.style.zIndex = '99999';
+    }
+    
+    // Hide site content during loading
+    if (siteWrapper) {
+        siteWrapper.style.visibility = 'hidden';
+        siteWrapper.style.opacity = '0';
+    }
     
     // Add loading active class to hide content
     body.classList.add('loading-active');
+    body.style.overflow = 'hidden';
     
     // Simulate loading progress
     const loadingInterval = setInterval(() => {
         // Simulate realistic loading increments
-        const increment = Math.random() * 15 + 5; // Random increment between 5-20
+        const increment = Math.random() * 8 + 3; // Random increment between 3-11 (slower)
         loadingProgress += increment;
         
         // Slow down as we approach 100%
         if (loadingProgress > 80) {
-            loadingProgress += Math.random() * 3 + 1; // Slower increment
+            loadingProgress += Math.random() * 2 + 1; // Slower increment
         }
         
         // Cap at 95% until everything is actually loaded
@@ -40,8 +58,10 @@ function initLoadingScreen() {
         }
         
         // Update progress bar and percentage
-        progressFill.style.width = loadingProgress + '%';
-        percentageDisplay.textContent = Math.floor(loadingProgress) + '%';
+        if (progressFill && percentageDisplay) {
+            progressFill.style.width = loadingProgress + '%';
+            percentageDisplay.textContent = Math.floor(loadingProgress) + '%';
+        }
         
         // Complete loading when progress reaches 100%
         if (loadingProgress >= 100) {
@@ -50,7 +70,7 @@ function initLoadingScreen() {
                 completeLoading();
             }, 500);
         }
-    }, 100);
+    }, 150);
     
     // Ensure loading completes when page is fully loaded
     window.addEventListener('load', function() {
@@ -82,26 +102,43 @@ function initLoadingScreen() {
 function completeLoading() {
     const loadingScreen = document.getElementById('loading-screen');
     const body = document.body;
+    const siteWrapper = document.querySelector('.site-wrapper');
     
-    // Add fade out class
-    loadingScreen.classList.add('fade-out');
+    console.log('Completing loading...'); // Debug log
+    
+    if (loadingScreen) {
+        // Add fade out class
+        loadingScreen.classList.add('fade-out');
+        
+        // Remove loading screen from DOM after animation
+        setTimeout(() => {
+            if (loadingScreen && loadingScreen.parentNode) {
+                loadingScreen.remove();
+            }
+        }, 800);
+    }
     
     // Remove loading active class to show content
     body.classList.remove('loading-active');
     
-    // Remove loading screen from DOM after animation
-    setTimeout(() => {
-        if (loadingScreen) {
-            loadingScreen.remove();
-        }
-    }, 800);
+    // Ensure site wrapper is visible
+    if (siteWrapper) {
+        siteWrapper.style.visibility = 'visible';
+        siteWrapper.style.opacity = '1';
+        console.log('Site wrapper made visible'); // Debug log
+    }
+    
+    // Enable scrolling
+    body.style.overflow = 'auto';
     
     // Initialize AOS animations after loading
     setTimeout(() => {
         if (typeof AOS !== 'undefined') {
             AOS.refresh();
         }
-    }, 100);
+    }, 200);
+    
+    console.log('Loading completed successfully'); // Debug log
 }
 
 // ============= Animated Cursor Functionality =============
@@ -351,16 +388,18 @@ window.onscroll = function () {
 };
 
 function scrollFunction() {
-   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-       document.getElementById("backToTopBtn").style.display = "block";
-   } else {
-       document.getElementById("backToTopBtn").style.display = "none";
+   const backToTopBtn = document.getElementById("backToTopBtn");
+   if (backToTopBtn) {
+       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+           backToTopBtn.style.display = "block";
+       } else {
+           backToTopBtn.style.display = "none";
+       }
    }
 }
 
 function scrollToTop() {
-   const scrollToTopBtn = document.documentElement || document.body;
-   scrollToTopBtn.scrollIntoView({
+   document.documentElement.scrollIntoView({
        behavior: "smooth"
    });
 }
