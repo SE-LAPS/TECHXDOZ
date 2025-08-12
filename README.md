@@ -65,7 +65,7 @@ Ready to take your business to the next level? Reach out to us today!
 - **Phone**: +94 774 910 630 📱
 
 ## SITE Preview✨ 
-🌐 [https://tinyurl.com/NEW-TECHXDOZ](https://tinyurl.com/NEW-TECHXDOZ)
+🌐 [https://techxdoz-website.web.app](https://techxdoz-website.web.app)
 <br><br>
 
 ![Digital Services](https://github.com/user-attachments/assets/e88fb030-38ad-4629-8520-7fd532a73056)
