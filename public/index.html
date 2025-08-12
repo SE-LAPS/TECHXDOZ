@@ -16,6 +16,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Initialize Loading Screen Immediately -->
+    <script>
+        // Add loading-active class to body immediately
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.classList.add('loading-active');
+        });
+        
+        // Fallback to ensure loading screen shows
+        window.addEventListener('load', function() {
+            if (!document.body.classList.contains('loading-active')) {
+                document.body.classList.add('loading-active');
+            }
+        });
+    </script>
 </head>
 
 <body>
@@ -1479,10 +1494,6 @@
             </div>
         </div>
     </div>
-
-    <!-- button back to top -->
-    <button onclick="scrollToTop()" id="backToTopBtn" class="btn_hover2"><i
-            class="fa-solid fa-arrow-turn-up"></i></button>
 
   
     
