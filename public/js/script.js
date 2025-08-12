@@ -1,13 +1,110 @@
 // side bar start  
 
-// ============= Animated Cursor Functionality =============
+// ============= Loading Screen Functionality =============
+let loadingProgress = 0;
+let loadingComplete = false;
+
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize loading screen
+    initLoadingScreen();
+    
     // Check if device supports hover (desktop/laptop)
     if (window.matchMedia("(hover: hover)").matches) {
         initCustomCursor();
     }
 });
 
+function initLoadingScreen() {
+    const loadingScreen = document.getElementById('loading-screen');
+    const progressFill = document.querySelector('.progress-fill');
+    const percentageDisplay = document.querySelector('.loading-percentage');
+    const body = document.body;
+    
+    // Add loading active class to hide content
+    body.classList.add('loading-active');
+    
+    // Simulate loading progress
+    const loadingInterval = setInterval(() => {
+        // Simulate realistic loading increments
+        const increment = Math.random() * 15 + 5; // Random increment between 5-20
+        loadingProgress += increment;
+        
+        // Slow down as we approach 100%
+        if (loadingProgress > 80) {
+            loadingProgress += Math.random() * 3 + 1; // Slower increment
+        }
+        
+        // Cap at 95% until everything is actually loaded
+        if (loadingProgress > 95 && !loadingComplete) {
+            loadingProgress = 95;
+        }
+        
+        // Update progress bar and percentage
+        progressFill.style.width = loadingProgress + '%';
+        percentageDisplay.textContent = Math.floor(loadingProgress) + '%';
+        
+        // Complete loading when progress reaches 100%
+        if (loadingProgress >= 100) {
+            clearInterval(loadingInterval);
+            setTimeout(() => {
+                completeLoading();
+            }, 500);
+        }
+    }, 100);
+    
+    // Ensure loading completes when page is fully loaded
+    window.addEventListener('load', function() {
+        loadingComplete = true;
+        
+        // If progress is still below 100%, complete it
+        if (loadingProgress < 100) {
+            const finalInterval = setInterval(() => {
+                loadingProgress += 2;
+                progressFill.style.width = loadingProgress + '%';
+                percentageDisplay.textContent = Math.floor(loadingProgress) + '%';
+                
+                if (loadingProgress >= 100) {
+                    clearInterval(finalInterval);
+                    setTimeout(() => {
+                        completeLoading();
+                    }, 300);
+                }
+            }, 50);
+        }
+    });
+    
+    // Minimum loading time of 2 seconds for better UX
+    setTimeout(() => {
+        loadingComplete = true;
+    }, 2000);
+}
+
+function completeLoading() {
+    const loadingScreen = document.getElementById('loading-screen');
+    const body = document.body;
+    
+    // Add fade out class
+    loadingScreen.classList.add('fade-out');
+    
+    // Remove loading active class to show content
+    body.classList.remove('loading-active');
+    
+    // Remove loading screen from DOM after animation
+    setTimeout(() => {
+        if (loadingScreen) {
+            loadingScreen.remove();
+        }
+    }, 800);
+    
+    // Initialize AOS animations after loading
+    setTimeout(() => {
+        if (typeof AOS !== 'undefined') {
+            AOS.refresh();
+        }
+    }, 100);
+}
+
+// ============= Animated Cursor Functionality =============
 function initCustomCursor() {
     const cursorDot = document.querySelector('[data-cursor-dot]');
     const cursorOutline = document.querySelector('[data-cursor-outline]');
