@@ -5823,8 +5823,8 @@ mark {
 
 .program-card-redesigned {
     position: relative;
-    background: linear-gradient(145deg, #1a1a2e, #16213e);
-    border: 1px solid rgba(70, 130, 180, 0.4);
+    background: linear-gradient(145deg, #1a0f1a, #0f0a0f);
+    border: 1px solid rgba(80, 60, 80, 0.4);
     border-radius: 25px;
     padding: 40px;
     overflow: hidden;
@@ -5838,26 +5838,23 @@ mark {
     left: -2px;
     right: -2px;
     bottom: -2px;
-    background: linear-gradient(45deg, #4682B4, #2F4F4F, #4682B4, #2F4F4F);
+    background: linear-gradient(135deg, #2a1a2a, #1a0f1a, #2a1a2a);
     border-radius: 25px;
     opacity: 0;
-    transition: opacity 0.4s ease;
+    transition: all 0.4s ease;
     z-index: -1;
-    animation: rotate 4s linear infinite;
-}
-
-@keyframes rotate {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
 }
 
 .program-card-redesigned:hover .card-glow {
-    opacity: 0.7;
+    opacity: 0.8;
+    background: linear-gradient(135deg, #3d2a3d, #2a1a2a, #3d2a3d);
 }
 
 .program-card-redesigned:hover {
     transform: translateY(-10px);
-    box-shadow: 0 25px 50px rgba(70, 130, 180, 0.35);
+    box-shadow: 0 25px 50px rgba(20, 0, 20, 0.5), 0 0 30px rgba(120, 80, 120, 0.3);
+    border-color: rgba(150, 120, 150, 0.6);
+    background: linear-gradient(145deg, #2a1a2a, #1a0f1a);
 }
 
 .featured-badge-redesigned {
@@ -5892,7 +5889,7 @@ mark {
     position: relative;
     width: 80px;
     height: 80px;
-    background: linear-gradient(135deg, #4682B4, #2F4F4F);
+    background: linear-gradient(135deg, #3d2a3d, #2a1a2a);
     border-radius: 20px;
     display: flex;
     align-items: center;
@@ -5906,7 +5903,7 @@ mark {
     left: -5px;
     right: -5px;
     bottom: -5px;
-    background: linear-gradient(45deg, rgba(70, 130, 180, 0.4), transparent);
+    background: linear-gradient(45deg, rgba(150, 100, 150, 0.4), transparent);
     border-radius: 25px;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -6186,14 +6183,23 @@ mark {
 .program-category .program-card::before {
     content: '' !important;
     position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    background: linear-gradient(45deg, transparent, rgba(70, 130, 180, 0.1), transparent) !important;
+    inset: 0 !important;
+    background: radial-gradient(120% 120% at 50% 0%, rgba(255,255,255,0.04) 0%, rgba(0,0,0,0.12) 60%, rgba(0,0,0,0.18) 100%) !important;
     opacity: 0 !important;
-    transition: opacity 0.4s ease !important;
+    transition: opacity 0.35s ease !important;
     z-index: 1 !important;
+}
+
+.program-category-redesigned .program-card::after,
+.program-category .program-card::after {
+    content: '' !important;
+    position: absolute !important;
+    inset: -1px !important;
+    border-radius: 15px !important;
+    background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)) !important;
+    opacity: 0 !important;
+    transition: opacity 0.35s ease !important;
+    z-index: 0 !important;
 }
 
 .program-category-redesigned .program-card:hover::before,
@@ -6201,11 +6207,18 @@ mark {
     opacity: 1 !important;
 }
 
+.program-category-redesigned .program-card:hover::after,
+.program-category .program-card:hover::after {
+    opacity: 1 !important;
+}
+
 .program-category-redesigned .program-card:hover,
 .program-category .program-card:hover {
     transform: translateY(-8px) !important;
-    border-color: rgba(70, 130, 180, 0.6) !important;
-    box-shadow: 0 15px 35px rgba(70, 130, 180, 0.25), 0 0 15px rgba(70, 130, 180, 0.15) !important;
+    border-color: rgba(255, 255, 255, 0.14) !important;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35), 0 0 20px rgba(90, 60, 110, 0.25) !important;
+    background: rgba(20, 16, 24, 0.6) !important;
+    backdrop-filter: blur(14px) saturate(130%) !important;
 }
 
 .program-category-redesigned .program-card > *,
@@ -6218,20 +6231,20 @@ mark {
 .program-category .program-card .program-icon {
     width: 50px !important;
     height: 50px !important;
-    background: linear-gradient(135deg, #2F4F4F, #1e3a5f) !important;
+    background: linear-gradient(135deg, #3d2a3d, #2a1a2a) !important;
     border-radius: 10px !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
     margin-bottom: 10px !important;
     transition: all 0.3s ease !important;
-    box-shadow: 0 4px 15px rgba(70, 130, 180, 0.2) !important;
+    box-shadow: 0 4px 15px rgba(20, 0, 20, 0.3) !important;
 }
 
 .program-category-redesigned .program-card:hover .program-icon,
 .program-category .program-card:hover .program-icon {
-    background: linear-gradient(135deg, #4682B4, #2F4F4F) !important;
-    box-shadow: 0 6px 20px rgba(70, 130, 180, 0.4) !important;
+    background: linear-gradient(135deg, #5d4a5d, #3d2a3d) !important;
+    box-shadow: 0 6px 20px rgba(30, 10, 30, 0.5) !important;
     transform: scale(1.05) !important;
 }
 
@@ -6255,7 +6268,7 @@ mark {
     align-items: center;
     gap: 6px;
     font-size: 12px;
-    color: #4682B4;
+    color: #b888b8;
     margin: 6px 0;
 }
 
@@ -6288,7 +6301,7 @@ mark {
 }
 
 .program-card .program-features .feature i {
-    color: #4682B4;
+    color: #b888b8;
     font-size: 11px;
     width: 14px;
     min-width: 14px;
@@ -6300,19 +6313,19 @@ mark {
     align-items: center;
     margin-top: 15px;
     padding-top: 15px;
-    border-top: 1px solid rgba(70, 130, 180, 0.2);
+    border-top: 1px solid rgba(120, 80, 120, 0.3);
 }
 
 .program-card .program-price {
     font-size: 20px;
     font-weight: 800;
-    color: #4682B4;
+    color: #b888b8;
     font-family: "Raleway", sans-serif;
 }
 
 .program-category-redesigned .program-card .btn_hover1,
 .program-category .program-card .btn_hover1 {
-    background: linear-gradient(135deg, #4682B4, #2F4F4F) !important;
+    background: linear-gradient(135deg, #3d2a3d, #2a1a2a) !important;
     color: #ffffff !important;
     padding: 12px 25px !important;
     border-radius: 20px !important;
@@ -6320,16 +6333,17 @@ mark {
     font-weight: 600 !important;
     transition: all 0.3s ease !important;
     font-size: 14px !important;
-    border: none !important;
+    border: 1px solid rgba(120, 80, 120, 0.3) !important;
     cursor: pointer !important;
 }
 
 .program-category-redesigned .program-card .btn_hover1:hover,
 .program-category .program-card .btn_hover1:hover {
-    background: linear-gradient(135deg, #2F4F4F, #4682B4) !important;
+    background: linear-gradient(135deg, #5d4a5d, #3d2a3d) !important;
     transform: translateX(3px) !important;
-    box-shadow: 0 8px 15px rgba(70, 130, 180, 0.3) !important;
+    box-shadow: 0 8px 15px rgba(30, 10, 30, 0.4) !important;
     color: #ffffff !important;
+    border-color: rgba(150, 120, 150, 0.5) !important;
 }
 
 /* Text Colors and Additional Overrides */
@@ -6351,7 +6365,7 @@ mark {
     align-items: center !important;
     gap: 6px !important;
     font-size: 12px !important;
-    color: #4682B4 !important;
+    color: #b888b8 !important;
     margin: 6px 0 !important;
 }
 
@@ -6390,7 +6404,7 @@ mark {
 
 .program-category-redesigned .program-card .program-features .feature i,
 .program-category .program-card .program-features .feature i {
-    color: #4682B4 !important;
+    color: #b888b8 !important;
     font-size: 11px !important;
     width: 14px !important;
     min-width: 14px !important;
@@ -6403,14 +6417,14 @@ mark {
     align-items: center !important;
     margin-top: 15px !important;
     padding-top: 15px !important;
-    border-top: 1px solid rgba(70, 130, 180, 0.2) !important;
+    border-top: 1px solid rgba(120, 80, 120, 0.3) !important;
 }
 
 .program-category-redesigned .program-card .program-price,
 .program-category .program-card .program-price {
     font-size: 20px !important;
     font-weight: 800 !important;
-    color: #4682B4 !important;
+    color: #b888b8 !important;
     font-family: "Raleway", sans-serif !important;
 }
 
@@ -6484,14 +6498,14 @@ mark {
 .program-category-redesigned .program-card,
 .program-category .program-card {
     position: relative !important;
-    background: linear-gradient(145deg, #1a1a2e, #16213e) !important;
-    border: 1px solid rgba(70, 130, 180, 0.3) !important;
+    background: rgba(20, 16, 24, 0.45) !important;
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
     border-radius: 15px !important;
     padding: 20px !important;
     overflow: hidden !important;
     transition: all 0.4s ease !important;
-    backdrop-filter: blur(10px) !important;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+    backdrop-filter: blur(12px) saturate(120%) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25) !important;
     display: flex !important;
     flex-direction: column !important;
 }
