@@ -1379,3 +1379,77 @@ function initChatbot() {
         });
     }
 }
+
+/* === Performance Optimizations === */
+// Image lazy loading for browsers that don't support it natively
+if (!('loading' in HTMLImageElement.prototype)) {
+    // Fallback for browsers without native lazy loading
+    const images = document.querySelectorAll('img[loading="lazy"]');
+    const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src || img.src;
+                img.classList.remove('lazy');
+                imageObserver.unobserve(img);
+            }
+        });
+    });
+    
+    images.forEach(img => imageObserver.observe(img));
+}
+
+// Critical resource loading optimization
+document.addEventListener('DOMContentLoaded', function() {
+    // Preload next likely pages on hover
+    const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="./"]');
+    const preloadedUrls = new Set();
+    
+    internalLinks.forEach(link => {
+        link.addEventListener('mouseenter', function() {
+            const href = this.getAttribute('href');
+            if (href && !preloadedUrls.has(href)) {
+                const linkTag = document.createElement('link');
+                linkTag.rel = 'prefetch';
+                linkTag.href = href;
+                document.head.appendChild(linkTag);
+                preloadedUrls.add(href);
+            }
+        });
+    });
+    
+    // Add loading="lazy" to images that don't have it
+    const images = document.querySelectorAll('img:not([loading])');
+    images.forEach(img => {
+        if (!img.src.includes('hero') && !img.src.includes('logo') && !img.src.includes('loading')) {
+            img.setAttribute('loading', 'lazy');
+        }
+    });
+});
+
+// Optimize scroll performance
+let ticking = false;
+function optimizedScroll() {
+    // Throttled scroll handler
+    if (!ticking) {
+        requestAnimationFrame(() => {
+            // Scroll-based optimizations here
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // Hide/show header based on scroll
+            const header = document.querySelector('header');
+            if (header) {
+                if (scrollTop > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            }
+            
+            ticking = false;
+        });
+        ticking = true;
+    }
+}
+
+window.addEventListener('scroll', optimizedScroll, { passive: true });
