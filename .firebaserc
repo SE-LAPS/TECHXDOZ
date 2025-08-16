@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "techxdoz-website"
-  }
+    "default": "techxdoz-website",
+    "first": "techxdoz-website"
+  },
+  "targets": {},
+  "etags": {}
 }
