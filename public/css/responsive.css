@@ -555,6 +555,18 @@
    #search-bar form{
        width: 90%;
    }
+	.gallary .container {
+		margin-top: 0;
+	}
+	.ga-bg {
+		height: 200px;
+	}
+	.gallary img {
+		height: 220px;
+	}
+	.gallary img[alt="sm_img"] {
+		height: 120px;
+	}
 }
 
 @media screen and (max-width: 500px) {
@@ -680,4 +692,13 @@
        line-height: 20px;
        padding: 12px 26px 12px 26px !important;
    }
+	.ga-bg {
+		height: 140px;
+	}
+	.gallary img {
+		height: 180px;
+	}
+	.gallary img[alt="sm_img"] {
+		height: 110px;
+	}
 }
